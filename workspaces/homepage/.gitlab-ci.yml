@@ -1,0 +1,11 @@
+image: node:9.4.0
+
+pages:
+  script:
+    - yarn install
+    - yarn gatsby build
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
