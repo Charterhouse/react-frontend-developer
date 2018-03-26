@@ -11,8 +11,7 @@
 		"standard": "^11.0.1"
 	},
 	"workspaces": [
-		"packages/*",
-		"homepage"
+		"workspaces/*"
 	],
 	"standard": {
 		"parser": "babel-eslint",
