@@ -7,7 +7,7 @@ cache:
 pages:
   script:
     - yarn install
-    - yarn lerna build --scope react-frontend-developer develop --parallel
+    - yarn lerna run --scope react-frontend-developer build --parallel
   artifacts:
     paths:
       - workspaces/homepage/public
