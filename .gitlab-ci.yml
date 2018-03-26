@@ -1,0 +1,15 @@
+image: node:9.4.0
+
+cache:
+  paths:
+  - node_modules/
+
+pages:
+  script:
+    - yarn install
+    - yarn lerna build --scope react-frontend-developer develop --parallel
+  artifacts:
+    paths:
+      - workspaces/homepage/public
+  only:
+    - master
