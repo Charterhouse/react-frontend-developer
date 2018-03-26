@@ -1,0 +1,9 @@
+# mac os
+.DS_Store
+
+# js
+node_modules
+yarn-error.log
+
+# lerna
+lerna-debug.log
