@@ -1,10 +1,5 @@
 image: node:9.4.0
 
-cache:
-  paths:
-  - node_modules/
-  - workspaces/homepage/node_modules/
-
 pages:
   script:
     - yarn install
@@ -12,5 +7,9 @@ pages:
   artifacts:
     paths:
       - workspaces/homepage/public
+  cache:
+    paths:
+      - node_modules/
+      - workspaces/homepage/node_modules/
   only:
     - master
