@@ -1,8 +1,6 @@
-Blockchain lab website
+React Frontend Developer Homepage
 ======================
 
-These are the source files of the Philips blockchain lab website:
+These are the source files of the React Frontend Developer Homepage:
 
-http://blockchain-lab.gitlab-pages.ta.philips.com
-
-
+http://react-frontend-developer.gitlab-pages.ta.philips.com
