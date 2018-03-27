@@ -25,7 +25,7 @@ deploy:
     - git remote set-url origin git@gitlab.ta.philips.com:react-fontend-developer/react-frontend-developer.gitlab-pages.ta.philips.com.git
     - mkdir -pvm 0700 .ssh
     - echo "$ssh_deploy_key" > .ssh/id_rsa_digital_trust
-    - chmod 0400 .ssh/id_rsa-gitlab-ci
+    - chmod 0400 .ssh/id_rsa_digital_trust
     - git push origin gitlab-pages:master
   tags:
     - docker
