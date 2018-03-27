@@ -1,5 +1,8 @@
 image: node:9.4.0
 
+variables:
+  GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no -i .ssh/id_rsa_digital_trust"
+
 stages:
   - build
   - deploy
@@ -17,7 +20,12 @@ deploy:
   script:
     - git checkout -b gitlab-pages
     - git filter-branch --prune-empty --subdirectory-filter workspaces/homepage gitlab-pages
-    - git remote set-url origin https://gitlab.ta.philips.com/react-fontend-developer/react-frontend-developer.gitlab-pages.ta.philips.com.git
+    - git config --global user.email $(git --no-pager show -s --format='%ae' HEAD)
+    - git config --global user.name $(git --no-pager show -s --format='%an' HEAD)
+    - git remote set-url origin git@gitlab.ta.philips.com:react-fontend-developer/react-frontend-developer.gitlab-pages.ta.philips.com.git
+    - mkdir -pvm 0700 .ssh
+    - echo "$ssh_deploy_key" > .ssh/id_rsa_digital_trust
+    - chmod 0400 .ssh/id_rsa-gitlab-ci
     - git push origin gitlab-pages:master
   tags:
     - docker
