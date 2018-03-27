@@ -1,15 +1,25 @@
 image: node:9.4.0
 
-pages:
+stages:
+  - build
+  - deploy
+
+build:  
+  stage: build
   script:
     - yarn install
     - yarn lerna run --scope react-frontend-developer build --parallel
-  artifacts:
-    paths:
-      - workspaces/homepage/public
-  cache:
-    paths:
-      - node_modules/
-      - workspaces/homepage/node_modules/
-  only:
-    - master
+  tags:
+    - docker
+
+deploy:
+  stage: deploy
+  script:
+    - git filter-branch --prune-empty --subdirectory-filter workspaces/homepage gitlab-pages
+    - git remote set-url origin https://gitlab.ta.philips.com/react-fontend-developer/react-frontend-developer.gitlab-pages.ta.philips.com.git
+    - git push origin gitlab-pages:master
+  tags:
+    - docker
+cache:
+  paths:
+    - node_modules/
