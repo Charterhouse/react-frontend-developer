@@ -15,6 +15,7 @@ build:
 deploy:
   stage: deploy
   script:
+    - git checkout -b gitlab-pages
     - git filter-branch --prune-empty --subdirectory-filter workspaces/homepage gitlab-pages
     - git remote set-url origin https://gitlab.ta.philips.com/react-fontend-developer/react-frontend-developer.gitlab-pages.ta.philips.com.git
     - git push origin gitlab-pages:master
