@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/react-frontend-developer`,
   siteMetadata: {
     title: 'React Frontend Developer'
   },
