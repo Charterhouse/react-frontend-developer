@@ -17,7 +17,9 @@
 		"parser": "babel-eslint",
 		"ignore": [
 			"**/node_modules/**",
-			"**/distribution/**"
+			"**/lib/**",
+			"**/es/**",
+			"**/umd/**"
 		],
 		"envs": [
 			"es6",
