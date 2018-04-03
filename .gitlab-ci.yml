@@ -1,7 +1,5 @@
 image: node:9.4.0
 
-image: node:9.4.0
-
 pages:
   script:
     - yarn install
