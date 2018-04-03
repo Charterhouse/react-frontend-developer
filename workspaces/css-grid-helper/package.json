@@ -2,7 +2,7 @@
   "name": "css-grid-helper",
   "version": "1.0.0",
   "description": "Lightweight javascript helper to work with CSS grid",
-  "author": "Marcin Czenko",
+  "author": "Marcin Czenko <mczenko@me.com>",
   "license": "MIT",
   "main": "umd/css-grid-helper.min.js",
   "module": "es/index.js",
