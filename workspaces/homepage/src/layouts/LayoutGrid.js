@@ -1,6 +1,6 @@
 import glamorous from 'glamorous'
 import { rhythm } from '../utils/typography'
-import { Grid } from '../utils/grid'
+import { Grid } from 'css-grid-helper'
 
 let grid = new Grid([
   'sidebar content'
