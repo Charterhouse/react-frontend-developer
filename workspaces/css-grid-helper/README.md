@@ -93,11 +93,11 @@ Using *glamorous*, we conveniently merge the grid styling with the `gridItemLayo
 In the end we export the grid container (here `MainGrid`) and the remaining grid components that we then import and use in the `Main.js` file to create the actual grid:
 
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 import { MainGrid, HeaderGridItem, HorizontalMenuGridItem, SidePanelLeftGridItem, 
   ContentGridItem, SidePanelRightGridItem, MessengerGridItem,
-  StatusBarGridItem } from './MainGrid';
+  StatusBarGridItem } from './MainGrid'
 
 class Main extends Component {
 
@@ -130,10 +130,14 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export { Main }
 ```
 
 With this, we nicely separate the actual rendering of the grid in the `Main` component from the grid configuration that is provided by the `Grid` helper. We use css-in-js framework *Glamorous* to make the grid more React-like.
+
+[![Edit css-grid-helper-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/7m9q8ro3zq)
+
+<iframe src="https://codesandbox.io/embed/7m9q8ro3zq" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## See also
 
