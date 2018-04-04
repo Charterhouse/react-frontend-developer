@@ -9,16 +9,16 @@ Install using either `yarn` or `npm`:
 
 ```bash
 # yarn
-$ yarn add 'css-grid-helper'
+$ yarn add '@react-frontend-developer/css-grid-helper'
 # npm
-$ npm install 'css-grid-helper'
+$ npm install '@react-frontend-developer/css-grid-helper'
 ```
 
 ## Usage
 
 Let's assume that you build a grid-based layout, and you want your grid to look like this:
 
-![image of grid](images/grid.png)
+![image of grid](https://github.com/Charterhouse/react-frontend-developer/blob/master/workspaces/css-grid-helper/images/grid.png?raw=true)
 
 We recommend using the helper with one of the available *css-in-js* frameworks. Below we show how to use it with  [Glamorous](https://github.com/paypal/glamorous) which allows you to specify css styles in object syntax. If you prefer a closer to pure css way, you can try [styled-components](https://www.styled-components.com), which uses interpolated strings to specify the styles. For new projects though, I would recommend using [emotion](https://emotion.sh), which supports both object syntax and interpolated strings and it is smaller, faster, and more memory efficient.
 
@@ -26,7 +26,7 @@ With glamorous we can settle down on some conventions on how to approach styling
 
 ```javascript
 import glamorous from 'glamorous'
-import { Grid } from 'css-grid-helper'
+import { Grid } from '@react-frontend-developer/css-grid-helper'
 
 let grid = new Grid([
   'header         header         header',
