@@ -1,6 +1,6 @@
 import glamorous from 'glamorous'
 import { rhythm } from '../utils/typography'
-import { Grid } from 'css-grid-helper'
+import { Grid } from '@react-frontend-developer/css-grid-helper'
 
 let grid = new Grid([
   'sidebar content'
