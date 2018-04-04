@@ -137,8 +137,6 @@ With this, we nicely separate the actual rendering of the grid in the `Main` com
 
 [![Edit css-grid-helper-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/7m9q8ro3zq)
 
-<iframe src="https://codesandbox.io/embed/7m9q8ro3zq" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
 ## See also
 
 For a more complete story behind css-grid-helper, please consult the [nextbuild-2017-css-grid](https://github.com/marcinczenko/nextbuild-2017-css-grid) repository.
