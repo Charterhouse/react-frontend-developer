@@ -4,6 +4,10 @@
   "description": "React Frontend Developer homepage",
   "version": "1.0.0",
   "author": "Marcin Czenko <mczenko@me.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Charterhouse/react-frontend-developer.git"
+  },
   "dependencies": {
     "caniuse-db": "^1.0.30000815",
     "@react-frontend-developer/css-grid-helper": "^1.0.0",
