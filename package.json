@@ -13,6 +13,9 @@
 	"workspaces": [
 		"workspaces/*"
 	],
+	"scripts": {
+    "deploy": "yarn lerna run build --ignore homepage --stream && yarn lerna run build --scope homepage --stream"
+  },
 	"standard": {
 		"parser": "babel-eslint",
 		"ignore": [
