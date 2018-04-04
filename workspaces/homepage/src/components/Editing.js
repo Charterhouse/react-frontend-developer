@@ -1,8 +1,8 @@
 import React from 'react'
 
 const editUrl =
-  'https://gitlab.ta.philips.com/react-fontend-developer/' +
-  'react-frontend-developer/blob/master/workspaces/homepage/src/pages'
+  'https://github.com/Charterhouse/react-frontend-developer/' +
+  'blob/master/workspaces/homepage/src/pages'
 
 export const EditFile = ({ fileAbsolutePath }) => {
   const fileName = fileAbsolutePath.split('/').pop()
