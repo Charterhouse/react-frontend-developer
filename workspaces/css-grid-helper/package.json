@@ -1,6 +1,6 @@
 {
   "name": "@react-frontend-developer/css-grid-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight javascript helper to work with CSS grid",
   "author": "Marcin Czenko <mczenko@me.com>",
   "license": "MIT",
