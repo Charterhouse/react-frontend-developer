@@ -21,6 +21,13 @@
   "publishConfig": {
     "access": "public"
   },
+  "keywords": [
+    "css-in-js",
+    "react",
+    "glamorous",
+    "emotion",
+    "styled-components"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",
     "@babel/core": "^7.0.0-beta.42",
