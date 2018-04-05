@@ -135,7 +135,9 @@ export { Main }
 
 With this, we nicely separate the actual rendering of the grid in the `Main` component from the grid configuration that is provided by the `Grid` helper. We use css-in-js framework *Glamorous* to make the grid more React-like.
 
-[![Edit css-grid-helper-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/7m9q8ro3zq)
+<a href="https://codesandbox.io/s/7m9q8ro3zq">
+  <img alt="Edit css-grid-helper-demo" src="https://camo.githubusercontent.com/416c7a7433e9d81b4e430b561d92f22ac4f15988/68747470733a2f2f636f646573616e64626f782e696f2f7374617469632f696d672f706c61792d636f646573616e64626f782e737667">
+</a>
 
 ## See also
 
