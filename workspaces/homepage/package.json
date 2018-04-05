@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "caniuse-db": "^1.0.30000815",
-    "@react-frontend-developer/css-grid-helper": "^0.9.0",
+    "@react-frontend-developer/css-grid-helper": "^1.0.0",
     "gatsby": "^1.9.223",
     "gatsby-link": "^1.6.38",
     "gatsby-plugin-catch-links": "^1.0.19",
