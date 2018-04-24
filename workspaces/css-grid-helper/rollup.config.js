@@ -7,7 +7,7 @@ import resolve from 'rollup-plugin-node-resolve'
 const config = {
   input: 'source/index.js',
   output: {
-    name: 'cogito-web3'
+    name: 'css-grid-helper'
   },
   external: ['web3'],
   plugins: [
