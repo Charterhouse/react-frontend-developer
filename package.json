@@ -1,18 +1,20 @@
 {
 	"private": true,
 	"devDependencies": {
-		"@babel/core": "^7.0.0-beta.42",
-		"@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.42",
+		"@babel/core": "7.0.0-beta.44",
+		"@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.44",
 		"babel-core": "^6.26.0",
-		"babel-eslint": "^8.2.2",
+		"babel-eslint": "8.2.2",
 		"babel-jest": "^22.4.3",
 		"jest": "^22.4.3",
-		"lerna": "^2.9.0",
+		"lerna": "^2.11.0",
 		"standard": "^11.0.1"
 	},
-	"workspaces": [
-		"workspaces/*"
-	],
+	"workspaces": {
+		"packages": [
+			"workspaces/*"
+		]
+	},
 	"scripts": {
     "deploy": "yarn lerna run build --ignore homepage --stream && yarn lerna run build --scope homepage --stream"
   },
