@@ -4,6 +4,11 @@
   "description": "Lightweight javascript helper to work with CSS grid",
   "author": "Marcin Czenko <mczenko@me.com>",
   "license": "MIT",
+  "homepage": "https://github.com/Charterhouse/react-frontend-developer/tree/master/workspaces/css-grid-helper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Charterhouse/react-frontend-developer.git"
+  },
   "main": "umd/css-grid-helper.min.js",
   "module": "es/index.js",
   "scripts": {
