@@ -104,9 +104,9 @@ const state = {
 
 WithStore.mockStore(state)
 
-it('renders without crashing', async () => {
+it('renders without crashing', () => {
   const div = document.createElement('div')
-  await ReactDOM.render(<ConnectedComponent />, div)
+  ReactDOM.render(<ConnectedComponent />, div)
 })
 
 it('renders correctly', () => {
