@@ -1,5 +1,7 @@
 ## React Frontend Developer
 
+[![Build Status](https://travis-ci.org/Charterhouse/react-frontend-developer.svg?branch=master)](https://travis-ci.org/Charterhouse/react-frontend-developer)
+
 This is a monorepo for various resources and packages intended for use in React-based frontends.
 
 It also serves a live documentation. Currently it demonstrates how to use Gatsby to build a handy markdown documentation browser and a small helper module for a more declarative css-grid in React.
