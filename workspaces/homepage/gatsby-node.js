@@ -1,7 +1,7 @@
 const path = require('path')
 
-exports.createPages = async ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions
   const markdownTemplate = path.resolve(`src/templates/markdownTemplate.js`)
 
   const queryResult = await graphql(`

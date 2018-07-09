@@ -2,19 +2,21 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { EditFile } from '../components/Editing'
 import glamorous from 'glamorous'
-import graphql from 'graphql'
+import { graphql } from 'gatsby'
+
+import Layout from '../components/Layout'
 
 const Template = ({ data: { doc } }) => {
   const { html, fileAbsolutePath, frontmatter: { title } } = doc
   return (
-    <div>
+    <Layout>
       <Helmet title={title} />
       <Header>
         <h1>{title}</h1>
         <EditFile fileAbsolutePath={fileAbsolutePath} />
       </Header>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    </Layout>
   )
 }
 
