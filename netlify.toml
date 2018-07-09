@@ -11,4 +11,3 @@ ID = "942f26ac-6a26-41c6-95e8-898da174f3b7"
 
 [build.environment]
   YARN_VERSION = "1.7.0"
-  NODE_ENV = "production"
