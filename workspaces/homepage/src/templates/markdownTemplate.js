@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { EditFile } from '../components/Editing'
-import glamorous from 'glamorous'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
@@ -11,20 +10,12 @@ const Template = ({ data: { doc } }) => {
   return (
     <Layout>
       <Helmet title={title} />
-      <Header>
-        <h1>{title}</h1>
-        <EditFile fileAbsolutePath={fileAbsolutePath} />
-      </Header>
+      <EditFile fileAbsolutePath={fileAbsolutePath} />
+      <h1>{title}</h1>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
-
-const Header = glamorous.div({
-  display: 'flex',
-  flexFlow: 'row nowrap',
-  justifyContent: 'space-between'
-})
 
 export const pageQuery = graphql`
   query MarkdownByPath($path: String!) {

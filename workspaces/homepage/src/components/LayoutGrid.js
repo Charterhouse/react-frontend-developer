@@ -5,7 +5,7 @@ import { Grid } from '@react-frontend-developer/css-grid-helper'
 let grid = new Grid([
   'sidebar content'
 ], {
-  gridTemplateColumns: '300px 800px'
+  gridTemplateColumns: '300px auto'
 })
 
 const LayoutGrid = glamorous.div(grid.container, {
@@ -13,7 +13,7 @@ const LayoutGrid = glamorous.div(grid.container, {
   margin: rhythm(1)
 })
 
-const SidebarGridItem = glamorous.div(grid.sidebar, { padding: '1rem' })
-const ContentGridItem = glamorous.div(grid.content, { width: '100%' })
+const SidebarGridItem = glamorous.div(grid.sidebar)
+const ContentGridItem = glamorous.div(grid.content, { width: '100%', padding: '1rem' })
 
 export { LayoutGrid, SidebarGridItem, ContentGridItem }

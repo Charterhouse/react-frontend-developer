@@ -10,7 +10,9 @@ import { Navigation } from './Navigation'
 export const FixedNavigation = glamorous.div({
   display: 'block',
   position: 'fixed',
-  top: rhythm(1),
+  top: 0,
+  minWidth: '300px',
+  maxWidth: '300px',
   height: `calc(100vh - ${rhythm(2)})`,
   overflowY: 'auto',
   backgroundColor: '#70a8a9',

@@ -7,6 +7,9 @@ moragaTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   },
   'a:hover': {
     textDecoration: 'none'
+  },
+  'blockquote > p': {
+    fontSize: '1rem'
   }
 })
 
