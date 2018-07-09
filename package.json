@@ -7,7 +7,7 @@
 		"@babel/preset-react": "7.0.0-beta.44",
 		"@babel/plugin-proposal-class-properties": "7.0.0-beta.44",
 		"@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.44",
-		"babel-core": "^6.26.0",
+		"babel-core": "^7.0.0-0",
 		"babel-eslint": "8.2.2",
 		"babel-jest": "^22.4.3",
 		"jest": "^22.4.3",
@@ -21,12 +21,34 @@
 			"workspaces/*"
 		]
 	},
+	"jest": {
+		"projects": [
+				"workspaces/buffers"
+		],
+		"testMatch": [
+				"**/*.test.js"
+		],
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+				"source/**.js",
+				"!**/*.test.js",
+				"!**/node_modules/**"
+		],
+		"coverageReporters": [
+				"text-summary"
+		]
+	},
 	"scripts": {
+		"test": "yarn lint && yarn jest",
+		"test:watch": "yarn jest --watch",
+		"lint": "yarn standard",
+		"lint-fix": "yarn standard --fix --verbose",
     "deploy": "yarn lerna run build --ignore homepage --stream && yarn lerna run build --scope homepage --stream"
   },
 	"standard": {
 		"parser": "babel-eslint",
 		"ignore": [
+			"workspaces/homepage/public/**",
 			"**/node_modules/**",
 			"**/lib/**",
 			"**/es/**",
