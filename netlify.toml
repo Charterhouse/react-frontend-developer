@@ -8,3 +8,7 @@ ID = "942f26ac-6a26-41c6-95e8-898da174f3b7"
   publish = "workspaces/homepage/public/"
   # This will be your default build command
   command = "yarn deploy"
+
+[build.environment]
+  YARN_VERSION = "1.7.0"
+  NODE_ENV = "production"
