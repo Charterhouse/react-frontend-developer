@@ -30,7 +30,7 @@
 		],
 		"collectCoverage": true,
 		"collectCoverageFrom": [
-				"source/**.js",
+				"workspaces/buffers/source/**.js",
 				"!**/*.test.js",
 				"!**/node_modules/**"
 		],
