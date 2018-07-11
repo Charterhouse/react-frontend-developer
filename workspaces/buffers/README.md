@@ -135,3 +135,11 @@ Buffer.from('\u00124', 'binary')  // Buffer <12, 34>
 See more on RunKit: https://runkit.com/marcinczenko/5b3f3974226fb000128824a6.
 
 For `TypedArray` however, we do not have any equivalent API. Therefore, our `TypedArrays` provides some convenience methods for converting from and to strings.
+
+`TypedArrays` allows you to convert any `ArrayBuffer` to a string and vice versa in any encoding supported by `Buffer.from` and `Buffer.toString()`.
+
+> `TypedArrays` is using `Buffer` underneath to perform the conversion.
+
+And so we have `TypedArrays.string2ab` to convert a string to `ArrayBuffer` and `TypedArrays.ab2string` to convert `ArrayBuffer` to a string.
+
+We found that conversions to an from `Uint8Array` are the most frequent. For this reason in `TypedArrays` we included two convenience methods: `string2Uint8Array` and `uint8Array2string`.

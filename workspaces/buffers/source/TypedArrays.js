@@ -6,7 +6,7 @@ class TypedArrays {
     return Buffers.copyToArrayBuffer(buffer)
   }
 
-  static ab2string (ab, encoding) {
+  static ab2string (ab, encoding = 'utf16le') {
     return Buffer.from(ab).toString(encoding)
   }
 

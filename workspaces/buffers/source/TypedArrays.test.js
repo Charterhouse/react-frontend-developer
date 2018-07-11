@@ -115,5 +115,29 @@ describe('TypedArrays', () => {
 
       expect(output).toEqual(testBinaryString)
     })
+
+    it('can convert ArrayBuffer to utf8 string', () => {
+      const output = TypedArrays.ab2string(testUint8ArrayUtf8.buffer, 'utf8')
+
+      expect(output).toEqual(testString)
+    })
+
+    it('can convert ArrayBuffer to utf16 string', () => {
+      const output = TypedArrays.ab2string(testUint8ArrayUtf16.buffer)
+
+      expect(output).toEqual(testString)
+    })
+
+    it('can convert ArrayBuffer to hex string', () => {
+      const output = TypedArrays.ab2string(testUint8ArrayHex.buffer, 'hex')
+
+      expect(output).toEqual(testString.toLowerCase())
+    })
+
+    it('can convert ArrayBuffer to binary (latin1) string', () => {
+      const output = TypedArrays.ab2string(testUint8ArrayBinary.buffer, 'binary')
+
+      expect(output).toEqual(testBinaryString)
+    })
   })
 })
