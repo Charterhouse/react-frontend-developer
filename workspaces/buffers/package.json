@@ -1,6 +1,6 @@
 {
   "name": "@react-frontend-developer/buffers",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Helper utilities for manipulating Buffers and TypedArrays",
   "author": "Marcin Czenko <mczenko@me.com>",
   "license": "MIT",
@@ -27,11 +27,12 @@
     "access": "public"
   },
   "keywords": [
-    "css-in-js",
-    "react",
-    "glamorous",
-    "emotion",
-    "styled-components"
+    "NodeJS",
+    "Buffer",
+    "TypedArray",
+    "ArrayBuffer",
+    "Uint8Array",
+    "Uint16Array"
   ],
   "devDependencies": {
     "@babel/cli": "7.0.0-beta.44",
