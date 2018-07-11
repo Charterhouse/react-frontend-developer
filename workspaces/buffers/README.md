@@ -76,6 +76,19 @@ This is why we created this package. We got some options fixed for you and we ma
 
 So our convenience package provides two abstractions: `Buffers` and `TypedArrays`. `Buffers` provides a set of convenience methods to convert between `Buffer`s and `TypedArray`s using the copy and move semantics. `TypedArrays` provide convenience methods for creating `TypedArray`s from Strings - something we miss in the existing API.
 
+### `beforeAll()`
+
+Remember to import `Buffers` and `TypedArrays` in your code:
+
+```javascript
+import { Buffers, TypedArrays } from '@react-frontend-developer/buffers'
+
+// or using require
+const { Buffers, TypedArrays } = require('@react-frontend-developer/buffers')
+```
+
+We also prepared for you a RunKit where you can try it immediately: https://runkit.com/marcinczenko/5b437ad7b034eb0012c56c85
+
 #### You have a Buffer and want to convert it to TypedArray
 
 So `Buffer` is the older brother of `Uint8Array` - thus, we provides two methods to conveniently move between the two: `Buffers.copyToUint8Array` and `Buffers.moveToUint8Array`. `Buffers.copyToUint8Array` is super save. It takes a NodeJS `Buffer` as the input and returns `Uint8Array` with its own underlying `ArrayBuffer` so that you do not have to worry if the Buffer is modified after conversion. You also do not have to care about buffer sizes, message pools, etc:
