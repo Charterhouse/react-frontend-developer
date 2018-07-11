@@ -1,6 +1,6 @@
 {
   "name": "@react-frontend-developer/buffers",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Helper utilities for manipulating Buffers and TypedArrays",
   "author": "Marcin Czenko <mczenko@me.com>",
   "license": "MIT",
