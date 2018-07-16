@@ -43,6 +43,7 @@
 		"test:watch": "yarn jest --watch",
 		"lint": "yarn standard",
 		"lint-fix": "yarn standard --fix --verbose",
+		"build": "yarn lerna run build --scope @react-frontend-developer/**",
     "deploy": "yarn lerna run build --ignore homepage --stream && yarn lerna run build --scope homepage --stream"
   },
 	"standard": {
