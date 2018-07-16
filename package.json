@@ -1,12 +1,12 @@
 {
 	"private": true,
 	"devDependencies": {
-		"@babel/cli": "7.0.0-beta.44",
-		"@babel/core": "7.0.0-beta.44",
-		"@babel/preset-env": "7.0.0-beta.44",
-		"@babel/preset-react": "7.0.0-beta.44",
-		"@babel/plugin-proposal-class-properties": "7.0.0-beta.44",
-		"@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.44",
+		"@babel/cli": "^7.0.0-beta.53",
+		"@babel/core": "^7.0.0-beta.53",
+		"@babel/preset-env": "^7.0.0-beta.53",
+		"@babel/preset-react": "^7.0.0-beta.53",
+		"@babel/plugin-proposal-class-properties": "^7.0.0-beta.53",
+		"@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.53",
 		"babel-core": "^7.0.0-0",
 		"babel-eslint": "8.2.2",
 		"babel-jest": "^22.4.3",
