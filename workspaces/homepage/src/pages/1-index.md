@@ -40,6 +40,13 @@ We also recommend the [Advanced React Component Patterns] from Kent C. Dodds to 
 
 And then, being an advanced React Frontend Developer, you will most certainly enjoy the following great appearance from Michael Jackson: [Never Write Another HoC].
 
+## One more thing
+
+We are not selling:
+
+> We have no affiliation with any of the authors of the resources mentioned on this site and neither we are compensated in any way. The presented resources are our own picks and we found them very important when mastering React and its eco-system.
+
+
 [react-redux]: https://github.com/reduxjs/react-redux
 [Advanced React.js Full Course]: https://courses.reach.tech/p/advanced-react
 [Advanced React.js Free]: https://courses.reach.tech/p/advanced-react-free
