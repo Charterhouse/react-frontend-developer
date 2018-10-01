@@ -1,6 +1,7 @@
 ---
-path: /
+path: /learning/react
 title: Learning React
+tag: learning
 ---
 
 There are many great resources available to learn react and its eco-system. We find some of them particularly important and we decided to list them on this site for the user convenience. For the smooth start with the react ecosystem, we grouped the resources into three categories: beginner, intermediate, and advanced. The boundaries are not strict by any means, just an indication.

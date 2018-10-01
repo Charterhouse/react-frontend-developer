@@ -1,4 +1,4 @@
-## buffers
+# buffers
 
 `buffers` provide functions for manipulating NodeJS `Buffer` and JavaScript `ArrayBuffer`.
 

@@ -1,11 +1,12 @@
 import { React } from 'react'
-import 'prismjs/themes/prism-coy.css'
+import 'src/prismjs/themes/prism-tomorrow.css'
 import { StaticQuery, graphql } from 'gatsby'
 import glamorous from 'glamorous'
-import { rhythm } from '../utils/typography'
+import { rhythm } from 'src/utils/typography'
 
-import { LayoutGrid, SidebarGridItem, ContentGridItem } from './LayoutGrid'
-import { Navigation } from './Navigation'
+import { DocumentationLayoutGrid, SidebarGridItem, ContentGridItem } from './DocumentationLayoutGrid'
+import { Navigation } from 'src/components/navigation'
+import { SiteTitle } from './SiteTitle'
 
 export const FixedNavigation = glamorous.div({
   display: 'block',
@@ -15,22 +16,26 @@ export const FixedNavigation = glamorous.div({
   maxWidth: '300px',
   height: `calc(100vh - ${rhythm(2)})`,
   overflowY: 'auto',
-  backgroundColor: '#70a8a9',
-  borderRight: '1px solid #70a8a9',
+  backgroundColor: '#F7F7F7',
   WebkitOverflowScrolling: `touch`,
   '::-webkit-scrollbar': {
     width: `6px`,
     height: `6px`
   },
   '::-webkit-scrollbar-thumb': {
-    background: '#568e8f'
+    background: '#ccc'
   }
 })
 
-const Layout = ({ children, location }) => (
+const DocumentationLayout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query Navigation {
+        site {
+          siteMetadata {
+            title
+          }
+        }
         navigation: allMarkdownRemark(
           filter: { frontmatter: { path: { ne: "/404.html" } } }
           sort: { fields: [fileAbsolutePath], order: ASC }
@@ -40,6 +45,15 @@ const Layout = ({ children, location }) => (
               frontmatter {
                 title
                 path
+                tag
+                content {
+                  childMarkdownRemark {
+                    html
+                    headings(depth: h2) {
+                      value
+                    }
+                  }
+                }
               }
               headings(depth: h2) {
                 value
@@ -50,21 +64,22 @@ const Layout = ({ children, location }) => (
       }
     `}
     render={data => {
-      const { navigation: { docs } } = data
+      const { site: { siteMetadata: { title } }, navigation: { docs } } = data
       return (
-        <LayoutGrid>
+        <DocumentationLayoutGrid>
           <SidebarGridItem>
             <FixedNavigation>
-              <Navigation docs={docs} />
+              <SiteTitle title={title} />
+              <Navigation docs={docs} location={location} />
             </FixedNavigation>
           </SidebarGridItem>
           <ContentGridItem>
             { children }
           </ContentGridItem>
-        </LayoutGrid>
+        </DocumentationLayoutGrid>
       )
     }}
   />
 )
 
-export default Layout
+export { DocumentationLayout }

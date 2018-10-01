@@ -1,6 +1,4 @@
-React Frontend Developer Homepage
-======================
+# NextBuild 2018
 
-These are the source files of the React Frontend Developer Homepage:
+A markdown-focused documentation browser based on the powerful framework [Gatsby](https://www.gatsbyjs.org).
 
-https://react-frontend-developer.club

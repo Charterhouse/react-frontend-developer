@@ -1,14 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: 'React Frontend Developer'
+    title: 'React Frontend Developer',
+    editBaseUrl: 'https://github.com/Charterhouse/react-frontend-developer/blob/master'
   },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src`
+        path: `${__dirname}/../../`,
+        ignore: [
+          '**/node_modules/**',
+          '**/.cache/**',
+          '**/public/**',
+          '**/es/**',
+          '**/lib/**',
+          '**/umd/**'
+        ]
       }
     },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -51,6 +61,8 @@ module.exports = {
       }
     },
     'gatsby-plugin-glamor',
-    'gatsby-plugin-catch-links'
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-layout',
+    'gatsby-plugin-root-import'
   ]
 }

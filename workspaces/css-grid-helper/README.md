@@ -1,4 +1,4 @@
-## css-grid-helper
+# css-grid-helper
 
 css-grid-helper is a small utility that you can use for working with CSS
 grid from javascript in a more declarative way.
