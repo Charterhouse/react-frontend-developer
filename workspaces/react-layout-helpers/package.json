@@ -1,6 +1,6 @@
 {
   "name": "@react-frontend-developer/react-layout-helpers",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Common React commoponents for layout",
   "license": "MIT",
   "homepage": "https://github.com/Charterhouse/react-frontend-developer/tree/master/workspaces/react-layout-helpers",
@@ -32,9 +32,9 @@
     "layout"
   ],
   "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
     "glamor": "^2.20.40",
-    "glamorous": "^4.13.1"
+    "glamorous": "^4.13.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }

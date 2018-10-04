@@ -2,14 +2,14 @@
   "private": true,
   "name": "homepage",
   "description": "React Frontend Developer homepage",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "author": "Marcin Czenko <mczenko@me.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/Charterhouse/react-frontend-developer.git"
   },
   "dependencies": {
-    "@react-frontend-developer/css-grid-helper": "^1.0.11",
+    "@react-frontend-developer/css-grid-helper": "^1.0.12",
     "gatsby": "^2.0.0",
     "gatsby-plugin-catch-links": "^2.0.0",
     "gatsby-plugin-glamor": "^2.0.0",
