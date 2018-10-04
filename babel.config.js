@@ -16,7 +16,7 @@ module.exports = function (api) {
 function setupPresets (babelEnv) {
   let presetEnv = '@babel/preset-env'
 
-  if (babelEnv === 'es' || babelEnv === 'umd') {
+  if (babelEnv === 'es' || babelEnv === 'iife') {
     presetEnv = [
       '@babel/preset-env',
       { modules: false }

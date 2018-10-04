@@ -7,9 +7,8 @@ import resolve from 'rollup-plugin-node-resolve'
 const config = {
   input: 'source/index.js',
   output: {
-    name: 'css-grid-helper'
+    name: 'cssGridHelper'
   },
-  external: ['web3'],
   plugins: [
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)

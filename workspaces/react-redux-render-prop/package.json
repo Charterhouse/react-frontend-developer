@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/Charterhouse/react-frontend-developer.git"
   },
-  "main": "umd/react-redux-render-prop.min.js",
+  "main": "iife/react-redux-render-prop.min.js",
   "module": "es/index.js",
   "scripts": {
     "build": "node ./tools/build.js"
@@ -31,7 +31,7 @@
     "react-redux",
     "render props"
   ],
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   }

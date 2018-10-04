@@ -4,8 +4,8 @@ const prettyBytes = require('pretty-bytes')
 const gzipSize = require('gzip-size')
 
 class Builder {
-  constructor ({umdFileName}) {
-    this.umdFileName = umdFileName
+  constructor ({iifeFileName}) {
+    this.iifeFileName = iifeFileName
   }
 
   exec (command, extraEnv) {
@@ -16,6 +16,7 @@ class Builder {
   }
 
   build () {
+    console.log(`Building ${this.iifeFileName}`)
     console.log('Building CommonJS modules ...')
 
     this.exec('babel source -d lib --delete-dir-on-start --no-babelrc', {
@@ -28,25 +29,25 @@ class Builder {
       BABEL_ENV: 'es'
     })
 
-    console.log('\nBuilding UMD module ...')
+    console.log('\nBuilding IIFE module ...')
 
-    this.exec(`rollup -c -f umd -o umd/${this.umdFileName}.js`, {
-      BABEL_ENV: 'umd',
+    this.exec(`rollup -c -f iife -o iife/${this.iifeFileName}.js`, {
+      BABEL_ENV: 'iife',
       NODE_ENV: 'development'
     })
 
-    console.log('\nBuilding minimized UMD module ...')
+    console.log('\nBuilding minimized IIFE module ...')
 
-    this.exec(`rollup -c -f umd -o umd/${this.umdFileName}.min.js`, {
-      BABEL_ENV: 'umd',
+    this.exec(`rollup -c -f iife -o iife/${this.iifeFileName}.min.js`, {
+      BABEL_ENV: 'iife',
       NODE_ENV: 'production'
     })
 
     const size = gzipSize.sync(
-      fs.readFileSync(`umd/${this.umdFileName}.min.js`)
+      fs.readFileSync(`iife/${this.iifeFileName}.min.js`)
     )
 
-    console.log('\ngzipped, the UMD build is %s', prettyBytes(size))
+    console.log('\ngzipped, the IIFE build is %s', prettyBytes(size))
   }
 }
 

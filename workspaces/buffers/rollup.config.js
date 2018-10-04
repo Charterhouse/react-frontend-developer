@@ -11,7 +11,6 @@ const config = {
   output: {
     name: 'buffers'
   },
-  external: ['web3'],
   plugins: [
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)

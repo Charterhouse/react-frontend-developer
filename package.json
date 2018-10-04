@@ -65,18 +65,12 @@
 			"**/node_modules/**",
 			"**/lib/**",
 			"**/es/**",
-			"**/umd/**"
+			"**/iife/**"
 		],
 		"envs": [
 			"es6",
 			"browser",
 			"jest"
-		],
-		"globals": [
-			"artifacts",
-			"contract",
-			"assert",
-			"context"
 		]
 	}
 }

@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/Charterhouse/react-frontend-developer.git"
   },
-  "main": "umd/react-layout-helpers.min.js",
+  "main": "iife/react-layout-helpers.min.js",
   "module": "es/index.js",
   "scripts": {
     "build": "node ./tools/build.js"
@@ -32,11 +32,9 @@
     "layout"
   ],
   "dependencies": {
-    "glamor": "^2.20.40",
-    "glamorous": "^4.12.5"
-  },
-  "peerDependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.13.1"
   }
 }

@@ -9,12 +9,12 @@ import autoExternal from 'rollup-plugin-auto-external'
 const config = {
   input: 'source/index.js',
   output: {
-    name: 'cogito'
+    name: 'reactReduxRenderProp'
   },
   plugins: [
     autoExternal({
-      builtins: false,
-      dependencies: false,
+      builtins: true,
+      dependencies: true,
       peerDependencies: true
     }),
     replace({

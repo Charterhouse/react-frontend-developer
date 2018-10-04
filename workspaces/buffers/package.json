@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/Charterhouse/react-frontend-developer.git"
   },
-  "main": "umd/buffers.min.js",
+  "main": "iife/buffers.min.js",
   "module": "es/index.js",
   "scripts": {
     "build": "node ./tools/build.js"
