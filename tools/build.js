@@ -16,6 +16,7 @@ class Builder {
   }
 
   build () {
+    console.log('\n---------------------------------------------------')
     console.log(`Building ${this.iifeFileName}`)
     console.log('Building CommonJS modules ...')
 
@@ -48,6 +49,7 @@ class Builder {
     )
 
     console.log('\ngzipped, the IIFE build is %s', prettyBytes(size))
+    console.log('---------------------------------------------------\n')
   }
 }
 
