@@ -1,6 +1,6 @@
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 
-const Centered = glamorous.div({
+const Centered = styled('div')({
   display: 'flex',
   flexFlow: 'column nowrap',
   alignItems: 'center',
