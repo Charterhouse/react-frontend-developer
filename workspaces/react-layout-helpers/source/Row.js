@@ -1,6 +1,6 @@
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 
-export const Row = glamorous.div({
+export const Row = styled('div')({
   display: 'flex',
   flexFlow: 'row nowrap',
   justifyContent: 'center',
