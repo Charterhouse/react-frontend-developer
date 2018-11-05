@@ -1,6 +1,6 @@
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 
-const PageCentered = glamorous.div({
+const PageCentered = styled('div')({
   display: 'flex',
   flexFlow: 'row nowrap',
   justifyContent: 'center',
