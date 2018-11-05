@@ -1,6 +1,6 @@
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 
-const DistributedHorizontally = glamorous.div({
+const DistributedHorizontally = styled('div')({
   display: 'flex',
   flexFlow: 'row nowrap',
   justifyContent: 'space-between',
