@@ -838,7 +838,7 @@
   resolved "http://artifactory-ehv.ta.philips.com:8082/artifactory/api/npm/dl-common-npm/@emotion/stylis/-/stylis-0.7.1.tgz?dl=https://registry.yarnpkg.com/@emotion/stylis/-/stylis-0.7.1.tgz#50f63225e712d99e2b2b39c19c70fff023793ca5"
   integrity sha1-UPYyJecS2Z4rKznBnHD/8CN5PKU=
 
-"@emotion/unitless@^0.6.2", "@emotion/unitless@^0.6.7":
+"@emotion/unitless@^0.6.7":
   version "0.6.7"
   resolved "http://artifactory-ehv.ta.philips.com:8082/artifactory/api/npm/dl-common-npm/@emotion/unitless/-/unitless-0.6.7.tgz?dl=https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.7.tgz#53e9f1892f725b194d5e6a1684a7b394df592397"
   integrity sha1-U+nxiS9yWxlNXmoWhKezlN9ZI5c=
@@ -4165,19 +4165,6 @@ create-emotion-styled@^9.2.8:
   dependencies:
     "@emotion/is-prop-valid" "^0.6.1"
 
-create-emotion@^9.2.12:
-  version "9.2.12"
-  resolved "http://artifactory-ehv.ta.philips.com:8082/artifactory/api/npm/dl-common-npm/create-emotion/-/create-emotion-9.2.12.tgz?dl=https://registry.yarnpkg.com/create-emotion/-/create-emotion-9.2.12.tgz#0fc8e7f92c4f8bb924b0fef6781f66b1d07cb26f"
-  integrity sha1-D8jn+SxPi7kksP72eB9msdB8sm8=
-  dependencies:
-    "@emotion/hash" "^0.6.2"
-    "@emotion/memoize" "^0.6.1"
-    "@emotion/stylis" "^0.7.0"
-    "@emotion/unitless" "^0.6.2"
-    csstype "^2.5.2"
-    stylis "^3.5.0"
-    stylis-rule-sheet "^0.0.10"
-
 create-error-class@^3.0.0, create-error-class@^3.0.1:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
@@ -4480,7 +4467,7 @@ cssstyle@^1.0.0:
   dependencies:
     cssom "0.3.x"
 
-csstype@^2.2.0, csstype@^2.5.2:
+csstype@^2.2.0:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.7.tgz#bf9235d5872141eccfb2d16d82993c6b149179ff"
   integrity sha512-Nt5VDyOTIIV4/nRFswoCKps1R5CD1hkiyjBE9/thNaNZILLEviVw9yWQw15+O+CpNjQKB/uvdcxFFOrSflY3Yw==
@@ -5268,14 +5255,6 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
-
-emotion@^9.2.12:
-  version "9.2.12"
-  resolved "http://artifactory-ehv.ta.philips.com:8082/artifactory/api/npm/dl-common-npm/emotion/-/emotion-9.2.12.tgz?dl=https://registry.yarnpkg.com/emotion/-/emotion-9.2.12.tgz#53925aaa005614e65c6e43db8243c843574d1ea9"
-  integrity sha1-U5JaqgBWFOZcbkPbgkPIQ1dNHqk=
-  dependencies:
-    babel-plugin-emotion "^9.2.11"
-    create-emotion "^9.2.12"
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -14317,16 +14296,6 @@ stylehacks@^4.0.0:
     browserslist "^4.0.0"
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
-
-stylis-rule-sheet@^0.0.10:
-  version "0.0.10"
-  resolved "http://artifactory-ehv.ta.philips.com:8082/artifactory/api/npm/dl-common-npm/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz?dl=https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz#44e64a2b076643f4b52e5ff71efc04d8c3c4a430"
-  integrity sha1-ROZKKwdmQ/S1Ll/3HvwE2MPEpDA=
-
-stylis@^3.5.0:
-  version "3.5.3"
-  resolved "http://artifactory-ehv.ta.philips.com:8082/artifactory/api/npm/dl-common-npm/stylis/-/stylis-3.5.3.tgz?dl=https://registry.yarnpkg.com/stylis/-/stylis-3.5.3.tgz#99fdc46afba6af4deff570825994181a5e6ce546"
-  integrity sha1-mf3Eavumr03v9XCCWZQYGl5s5UY=
 
 sum-up@^1.0.1:
   version "1.0.3"
