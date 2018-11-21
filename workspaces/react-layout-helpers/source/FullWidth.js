@@ -1,6 +1,6 @@
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 
-const FullWidth = glamorous.div({
+const FullWidth = styled('div')({
   width: '100%',
   marginTop: '20px'
 })
