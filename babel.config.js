@@ -31,6 +31,7 @@ function setupPresets (babelEnv) {
 
 function setupPlugins () {
   return [
+    ['emotion', { 'hoist': true }],
     '@babel/plugin-proposal-object-rest-spread',
     '@babel/plugin-proposal-class-properties'
   ]
