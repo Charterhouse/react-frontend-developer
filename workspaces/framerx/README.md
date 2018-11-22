@@ -4,10 +4,10 @@
 [Bringing Design System Components from Production into Framer X]. Please
 check their original repo at https://github.com/shiftsave/framerx-build-system
 or take a look at the fork at  https://github.com/marcinczenko/framerx-build-system
-where we are adding some extra stuff. What we do at here at react-frontend-developer is
+where we are adding some extra stuff. What we show here at react-frontend-developer is
 simply a refinement and showing how does it fit into a monorepo.
 
-This workspace is a demonstration of how to expose production assets as
+This [workspace] is a demonstration of how to expose production assets as
 [FramerX] components. Here we have a monorepo. You can imagine that your monorepo
 may have a number of react components that you would like to expose to FramerX
 so that you can use them directly when designing.
@@ -81,3 +81,4 @@ We will keep it here for the reference.
 [FramerX Teams]: https://framer.com/teams/
 [FramerX]: https://framer.com
 [webpack]: https://webpack.js.org
+[workspace]: https://github.com/Charterhouse/react-frontend-developer/tree/master/workspaces/framerx
