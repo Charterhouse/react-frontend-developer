@@ -9,7 +9,11 @@ import autoExternal from 'rollup-plugin-auto-external'
 const config = {
   input: 'source/index.js',
   output: {
-    name: 'reactLayoutHelpers'
+    name: 'reactLayoutHelpers',
+    globals: {
+      react: 'React',
+      'react-emotion': 'styled'
+    }
   },
   plugins: [
     autoExternal({
