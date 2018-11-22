@@ -4,8 +4,7 @@
 
 This is a monorepo for various resources and packages intended for use in React-based frontends.
 
-It also serves as a live documentation. For instance, it demonstrates how to use [Confluenza]
-(https://confluenza.now.sh) (based on Gatsby) to build a handy markdown documentation browser.
+It also serves as a live documentation. For instance, it demonstrates how to use [Confluenza](https://confluenza.now.sh) (based on Gatsby) to build a handy markdown documentation browser.
 It also demonstrates how to configure the monorepo, and how to build an npm package supporting various 
 module systems.
 
