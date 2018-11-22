@@ -1,6 +1,6 @@
 import styled from 'react-emotion'
 
-const DistributedHorizontally = styled('div')({
+const DistributedHorizontally = styled.div({
   display: 'flex',
   flexFlow: 'row nowrap',
   justifyContent: 'space-between',

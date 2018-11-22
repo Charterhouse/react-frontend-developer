@@ -1,6 +1,6 @@
 import styled from 'react-emotion'
 
-const PageCentered = styled('div')({
+const PageCentered = styled.div({
   display: 'flex',
   flexFlow: 'row nowrap',
   justifyContent: 'center',
