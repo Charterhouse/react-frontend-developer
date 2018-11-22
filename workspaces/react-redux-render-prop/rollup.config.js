@@ -9,7 +9,10 @@ import autoExternal from 'rollup-plugin-auto-external'
 const config = {
   input: 'source/index.js',
   output: {
-    name: 'reactReduxRenderProp'
+    name: 'reactReduxRenderProp',
+    globals: {
+      react: 'React'
+    }
   },
   plugins: [
     autoExternal({
