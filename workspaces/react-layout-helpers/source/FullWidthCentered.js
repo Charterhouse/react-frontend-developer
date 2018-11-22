@@ -1,4 +1,4 @@
-import styled from 'react-styled'
+import styled from 'react-emotion'
 import { Centered } from './Centered'
 
 export const FullWidthCentered = styled(Centered)({
