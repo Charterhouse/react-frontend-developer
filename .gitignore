@@ -3,6 +3,7 @@
 
 # js
 node_modules
+lib
 yarn-error.log
 
 # lerna
