@@ -40,7 +40,7 @@ describe('Buffers', () => {
       })
 
       it('uses dedicated underlaying Array Buffer if the view length is equal to 4KB', () => {
-        const input = Uint8Array.from({length: 4096}, (v, k) => k)
+        const input = Uint8Array.from({ length: 4096 }, (v, k) => k)
 
         const buffer = Buffers.copyFromTypedArray(input)
 
@@ -48,7 +48,7 @@ describe('Buffers', () => {
       })
 
       it('uses dedicated underlaying Array Buffer if the view length is more than 4KB', () => {
-        const input = Uint8Array.from({length: 4097}, (v, k) => k)
+        const input = Uint8Array.from({ length: 4097 }, (v, k) => k)
 
         const buffer = Buffers.copyFromTypedArray(input)
 
@@ -60,7 +60,7 @@ describe('Buffers', () => {
   describe('converting Buffer to TypedArray', () => {
     describe('copying Buffer to ArrayBuffer', () => {
       it("copies the Buffer's underlying ArrayBuffer if its size is the same as that of the Buffer", () => {
-        const array = Uint8Array.from({length: 5}, (v, k) => k)
+        const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array.buffer)
 
         expect(buffer.length).toBe(buffer.buffer.byteLength)
@@ -73,7 +73,7 @@ describe('Buffers', () => {
       })
 
       it('buffers are safe - changes in source are not reflected in target', () => {
-        const array = Uint8Array.from({length: 5}, (v, k) => k)
+        const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array.buffer)
 
         const arrayBuffer = Buffers.copyToArrayBuffer(buffer)
@@ -86,7 +86,7 @@ describe('Buffers', () => {
       })
 
       it('copies the underlying buffer is size of the buffer is different from the size of the underlying array buffer (memory pool)', () => {
-        const array = Uint8Array.from({length: 5}, (v, k) => k)
+        const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array)
 
         expect(buffer.length).toBe(5)
@@ -100,7 +100,7 @@ describe('Buffers', () => {
       })
 
       it('provides convenience method to copy Buffer to Uint8Array', () => {
-        const array = Uint8Array.from({length: 5}, (v, k) => k)
+        const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array)
 
         const uint8Array = Buffers.copyToUint8Array(buffer)
@@ -111,7 +111,7 @@ describe('Buffers', () => {
 
     describe('moving Buffer to ArrayBuffer', () => {
       it("reuses the Buffer's underlying ArrayBuffer if its size is the same as that of the Buffer", () => {
-        const array = Uint8Array.from({length: 5}, (v, k) => k)
+        const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array.buffer)
 
         expect(buffer.length).toBe(buffer.buffer.byteLength)
@@ -123,7 +123,7 @@ describe('Buffers', () => {
       })
 
       it('buffers are connected - source should be used as read-only', () => {
-        const array = Uint8Array.from({length: 5}, (v, k) => k)
+        const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array.buffer)
 
         const arrayBuffer = Buffers.moveToArrayBuffer(buffer)
@@ -136,7 +136,7 @@ describe('Buffers', () => {
       })
 
       it('copies the underlying buffer is size of the buffer is different from the size of the underlying array buffer (memory pool)', () => {
-        const array = Uint8Array.from({length: 5}, (v, k) => k)
+        const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array)
 
         expect(buffer.length).toBe(5)
@@ -150,7 +150,7 @@ describe('Buffers', () => {
       })
 
       it('provides convenience method to move Buffer to Uint8Array', () => {
-        const array = Uint8Array.from({length: 5}, (v, k) => k)
+        const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array)
 
         const uint8Array = Buffers.moveToUint8Array(buffer)

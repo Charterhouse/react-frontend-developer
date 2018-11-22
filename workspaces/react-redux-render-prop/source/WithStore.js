@@ -5,7 +5,7 @@ const WithStoreContext = React.createContext({
 })
 
 class WithStore extends React.Component {
-  static Provider = ({value, children}) => (
+  static Provider = ({ value, children }) => (
     <WithStoreContext.Provider value={value}>
       {children}
     </WithStoreContext.Provider>
@@ -14,7 +14,7 @@ class WithStore extends React.Component {
   render () {
     return (
       <WithStoreContext.Consumer>
-        {({store}) => (
+        {({ store }) => (
           <WithStoreInner store={store} {...this.props}>
             {this.props.children}
           </WithStoreInner>
@@ -25,7 +25,7 @@ class WithStore extends React.Component {
 }
 
 class WithStoreInner extends React.Component {
-  constructor ({store, selector}) {
+  constructor ({ store, selector }) {
     super()
     const state = store.getState()
     const dprops = selector(state)

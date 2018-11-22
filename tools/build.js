@@ -4,7 +4,7 @@ const prettyBytes = require('pretty-bytes')
 const gzipSize = require('gzip-size')
 
 class Builder {
-  constructor ({iifeFileName}) {
+  constructor ({ iifeFileName }) {
     this.iifeFileName = iifeFileName
   }
 
