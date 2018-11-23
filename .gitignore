@@ -8,3 +8,6 @@ yarn-error.log
 
 # lerna
 lerna-debug.log
+
+# test coverage
+coverage

@@ -35,23 +35,6 @@
 			"workspaces/*"
 		]
 	},
-	"jest": {
-		"projects": [
-			"workspaces/buffers"
-		],
-		"testMatch": [
-			"**/*.test.js"
-		],
-		"collectCoverage": true,
-		"collectCoverageFrom": [
-			"workspaces/buffers/source/**.js",
-			"!**/*.test.js",
-			"!**/node_modules/**"
-		],
-		"coverageReporters": [
-			"text-summary"
-		]
-	},
 	"scripts": {
 		"test": "yarn lint && yarn jest",
 		"test:watch": "yarn jest --watch",
