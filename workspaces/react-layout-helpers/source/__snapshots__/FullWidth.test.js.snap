@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullWidth has proper styling 1`] = `
+.emotion-0 {
+  width: 100%;
+  margin-top: 20px;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  />
+</div>
+`;

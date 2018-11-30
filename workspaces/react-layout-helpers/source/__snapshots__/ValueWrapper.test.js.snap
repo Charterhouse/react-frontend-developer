@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValueWrapper has proper styling 1`] = `
+.emotion-0 {
+  border-radius: 15px;
+  border: 1px solid #ff80c3;
+  padding: 10px;
+  margin: 10px;
+  min-width: 6rem;
+  text-align: center;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  />
+</div>
+`;

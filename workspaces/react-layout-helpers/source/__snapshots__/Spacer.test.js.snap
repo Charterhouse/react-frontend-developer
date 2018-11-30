@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer has proper styling 1`] = `
+<div>
+  <div
+    style="margin: 0px; padding: 0px; box-sizing: border-box;"
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`Spacer has proper styling when using render prop 1`] = `
+<div>
+  <div
+    style="margin: 0px; padding: 0px; box-sizing: border-box;"
+  >
+    test
+  </div>
+</div>
+`;
