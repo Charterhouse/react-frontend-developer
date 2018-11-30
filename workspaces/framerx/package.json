@@ -12,7 +12,6 @@
     "sync:framerx": "cp _base.framerx react-frontend-developer.framerx && zip -ur react-frontend-developer.framerx lib/* && cd src/ && zip -ur ../react-frontend-developer.framerx code/* design/* && cd .."
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
     "file-loader": "^2.0.0",
@@ -29,8 +28,8 @@
   "dependencies": {
     "@cogitojs/cogito-react-ui": "^0.2.18",
     "@react-frontend-developer/react-layout-helpers": "^1.0.14",
-    "emotion": "^9.2.12",
-    "react-emotion": "^9.2.12",
+    "@emotion/core": "^10.0.0",
+    "@emotion/styled": "^10.0.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.83.0"
   }

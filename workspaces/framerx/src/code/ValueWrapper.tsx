@@ -1,6 +1,6 @@
 import * as React from "react";
 import { PropertyControls, ControlType } from "framer";
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 import { ValueWrapper as _ValueWrapper } from "../lib";
 
