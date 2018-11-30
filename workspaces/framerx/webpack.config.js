@@ -33,7 +33,7 @@ const config = {
       commonjs: 'react-emotion',
       commonjs2: 'react-emotion'
     },
-    'emotion': {
+    emotion: {
       commonjs: 'emotion',
       commonjs2: 'emotion'
     },
@@ -56,7 +56,7 @@ const config = {
           babelrc: false,
           presets: ['@babel/env', '@babel/preset-react'],
           plugins: [
-            ['emotion', { 'hoist': true }],
+            'emotion',
             '@babel/plugin-proposal-object-rest-spread',
             '@babel/plugin-proposal-class-properties'
           ]

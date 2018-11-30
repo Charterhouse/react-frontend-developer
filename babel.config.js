@@ -17,21 +17,15 @@ function setupPresets (babelEnv) {
   let presetEnv = '@babel/preset-env'
 
   if (babelEnv === 'es' || babelEnv === 'iife') {
-    presetEnv = [
-      '@babel/preset-env',
-      { modules: false }
-    ]
+    presetEnv = ['@babel/preset-env', { modules: false }]
   }
 
-  return [
-    presetEnv,
-    '@babel/preset-react'
-  ]
+  return [presetEnv, '@babel/preset-react']
 }
 
 function setupPlugins () {
   return [
-    ['emotion', { 'hoist': true }],
+    'emotion',
     '@babel/plugin-proposal-object-rest-spread',
     '@babel/plugin-proposal-class-properties'
   ]
@@ -41,9 +35,7 @@ function setupIgnoredFiles (babelEnv) {
   let ignore
 
   if (babelEnv !== 'test') {
-    ignore = [
-      '**/*.test.js'
-    ]
+    ignore = ['**/*.test.js']
   }
 
   return ignore
