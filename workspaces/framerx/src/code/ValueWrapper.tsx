@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 
 import { ValueWrapper as _ValueWrapper } from "../lib";
 
-const Wrapper = styled('div')({
+const Wrapper = styled.div({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

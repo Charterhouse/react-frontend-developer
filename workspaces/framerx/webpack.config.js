@@ -29,13 +29,13 @@ const config = {
       commonjs: 'prop-types',
       commonjs2: 'prop-types'
     },
-    'react-emotion': {
-      commonjs: 'react-emotion',
-      commonjs2: 'react-emotion'
+    '@emotion/styled': {
+      commonjs: '@emotion/styled',
+      commonjs2: '@emotion/styled'
     },
-    emotion: {
-      commonjs: 'emotion',
-      commonjs2: 'emotion'
+    '@emotion/core': {
+      commonjs: '@emotion/core',
+      commonjs2: '@emotion/core'
     },
     'semantic-ui-css': {
       commonjs: 'semantic-ui-css',
