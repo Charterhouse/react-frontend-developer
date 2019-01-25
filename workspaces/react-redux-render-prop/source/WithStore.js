@@ -5,7 +5,6 @@ const WithStoreContext = React.createContext({
 })
 
 class WithStoreInner extends React.Component {
-  // selector does what the maptoStateto props does
   constructor ({ store, selector = state => state }) {
     super()
     const state = store.getState()
