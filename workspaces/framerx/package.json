@@ -1,6 +1,6 @@
 {
   "name": "framerx",
-  "version": "1.0.15",
+  "version": "1.0.17",
   "description": "Provides bundled react components for FramerX",
   "private": true,
   "main": "lib/index.js",
@@ -29,7 +29,7 @@
     "@cogitojs/cogito-react-ui": "^0.2.20",
     "@emotion/core": "^10.0.0",
     "@emotion/styled": "^10.0.0",
-    "@react-frontend-developer/react-layout-helpers": "^1.0.15",
+    "@react-frontend-developer/react-layout-helpers": "^1.0.17",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.84.0"
   }
