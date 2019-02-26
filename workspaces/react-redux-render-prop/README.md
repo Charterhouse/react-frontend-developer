@@ -81,6 +81,33 @@ If you like you can also use a render prop:
 />
 ```
 
+You can use `WithStore` without providing a selector. This is useful when your component wants to
+be able to dispatch actions but is not per-se interested in observing the state:
+
+```jsx
+<WithStore
+  render={dispatch =>
+    <div>
+      <p>I do not care about the state!</p>
+      <button onClick={() => this.onClick(dispatch)}>Dispatch</button>
+    </div>
+  }
+/>
+```
+
+or
+
+```jsx
+<WithStore>
+  { dispatch =>
+      <div>
+        <p>I do not care about the state!</p>
+        <button onClick={() => this.onClick(dispatch)}>Dispatch</button>
+      </div>
+  }
+</WithStore>
+```
+
 For testing, we also provide a simple, ready to use mock that you can use as a manual mock.
 First on the top-level of your app (or where your `NODE_PATH` points to) create a folder `@react-frontend-developer` and inside it file `react-redux-render-prop.js`. Inside that file put:
 
