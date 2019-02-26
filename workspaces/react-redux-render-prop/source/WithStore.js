@@ -19,12 +19,12 @@ class WithStoreInner extends React.Component {
   }
 
   componentDidMount () {
-    if(this.props.selector) {
+    if (this.props.selector) {
       this.unsubscribe = this.props.store.subscribe(() => {
         if (this.unmounted) return
         const state = this.props.store.getState()
-        const props = this.props.selector ? this.props.selector(state): state
-        if(!deepEqual(props, this.state, { strict: true })) {
+        const props = this.props.selector ? this.props.selector(state) : state
+        if (!deepEqual(props, this.state, { strict: true })) {
           this.setState({
             ...props
           })
@@ -32,7 +32,6 @@ class WithStoreInner extends React.Component {
       })
       this.unmounted = false
     }
-    
   }
 
   componentWillUnmount () {
