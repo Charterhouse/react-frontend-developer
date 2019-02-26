@@ -1,34 +1,43 @@
 import React from 'react'
+import deepEqual from 'deep-equal'
 
 const WithStoreContext = React.createContext({
   store: {}
 })
 
 class WithStoreInner extends React.Component {
-  constructor ({ store, selector = state => state }) {
-    super()
-    const state = store.getState()
-    const dprops = selector(state)
-    this.state = {
-      ...dprops
+  constructor (props) {
+    super(props)
+    const { store, selector } = props
+    if (selector) {
+      const state = store.getState()
+      const dprops = selector(state)
+      this.state = {
+        ...dprops
+      }
     }
   }
 
   componentDidMount () {
-    this.unsubscribe = this.props.store.subscribe(() => {
-      if (this.unmounted) return
-      const state = this.props.store.getState()
-      const props = this.props.selector(state)
-      this.setState({
-        ...props
+    if(this.props.selector) {
+      this.unsubscribe = this.props.store.subscribe(() => {
+        if (this.unmounted) return
+        const state = this.props.store.getState()
+        const props = this.props.selector ? this.props.selector(state): state
+        if(!deepEqual(props, this.state, { strict: true })) {
+          this.setState({
+            ...props
+          })
+        }
       })
-    })
-    this.unmounted = false
+      this.unmounted = false
+    }
+    
   }
 
   componentWillUnmount () {
     this.unmounted = true
-    this.unsubscribe()
+    this.unsubscribe && this.unsubscribe()
   }
 
   render () {

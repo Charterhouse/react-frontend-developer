@@ -9,6 +9,10 @@ const testReducer = (state = {}, action) => {
       return {
         name: action.name
       }
+    case 'SET_OBJECT':
+      return {
+        object: action.object
+      }
     default:
       return state
   }
@@ -33,15 +37,23 @@ describe('WithStore', () => {
   }
 
   const selector = state => ({ name: state.name })
+  const objectSelector = state => ({
+    object: state.object
+  })
   const setNameAction = name => ({ type: 'SET_NAME', name })
+  const setObjectAction = object => ({ type: 'SET_OBJECT', object })
 
   beforeEach(() => {
     store = createStore(testReducer)
     functionArgs = {}
-    renderFunction = (obj, dispatch) => {
-      Object.assign(functionArgs, obj, { dispatch })
+    renderFunction = jest.fn((obj, dispatch) => {
+      if (typeof obj === 'function' && dispatch === undefined) {
+        Object.assign(functionArgs, { dispatch })  
+      } else {
+        Object.assign(functionArgs, obj, { dispatch })
+      }
       return null
-    }
+    })
   })
 
   it('always provides dispatch to the render function', () => {
@@ -88,5 +100,27 @@ describe('WithStore', () => {
 
     functionArgs.dispatch(setNameAction(name))
     expect(functionArgs.name).toBe(name)
+  })
+
+  it('does not re-render when the observed props did not change (deepEqual)', () => {
+    render({ renderFunction, selector: objectSelector })
+    expect(functionArgs.object).not.toBeDefined()
+
+    const object = { a: 1, b: { c: 2, d: '3' } }
+
+    functionArgs.dispatch(setObjectAction(object))
+    expect(functionArgs.object).toMatchObject(object)
+
+    functionArgs.dispatch(setObjectAction({ ...object }))
+    expect(renderFunction).toHaveBeenCalledTimes(2)
+  })
+
+  it('only provides the dispatch function when selector is not provided', () => {
+    render({ renderFunction, selector: undefined })
+    expect(functionArgs.dispatch).toBe(store.dispatch)
+    expect(Object.keys(functionArgs)).toEqual(['dispatch'])
+
+    functionArgs.dispatch(setNameAction(name))
+    expect(Object.keys(functionArgs)).toEqual(['dispatch'])
   })
 })
