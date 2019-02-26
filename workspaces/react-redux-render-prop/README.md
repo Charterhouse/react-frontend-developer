@@ -2,7 +2,11 @@
 
 This is a render-props version of [react-redux](https://github.com/reactjs/react-redux/).
 
-> This is preliminary documentation and will be improved over time. We will also add example app at a later stage.
+> To give credits to react-redux, take into account that react-redux is way more sophisticated. `react-redux-render-prop` does not guarantee the proper order of updates as is the case for `react-redux`. For smaller projects and where your global state is not too deep, `react-redux-render-prop` can still
+be considered as an alternative. To learn more about what this solution is missing comparing to
+`react-redux` please consult [Implement React Redux from Scratch](https://medium.com/netscape/implementation-of-react-redux-part-1-411b971a9b5b).
+
+> In the advent of react *hooks* and *suspense* and with official public *context* API, you may consider to stop using redux at all.
 
 ## Installing
 
