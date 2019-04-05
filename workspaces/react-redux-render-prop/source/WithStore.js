@@ -60,19 +60,18 @@ class WithStore extends React.Component {
       {children}
     </WithStoreContext.Provider>
   )
-   static WithStoreInner = WithStoreInner;
 
-   render () {
-     return (
-       <WithStoreContext.Consumer>
-         {({ store }) => (
-           <WithStoreInner store={store} {...this.props}>
-             {this.props.children}
-           </WithStoreInner>
-         )}
-       </WithStoreContext.Consumer>
-     )
-   }
+  render () {
+    return (
+      <WithStoreContext.Consumer>
+        {({ store }) => (
+          <WithStoreInner store={store} {...this.props}>
+            {this.props.children}
+          </WithStoreInner>
+        )}
+      </WithStoreContext.Consumer>
+    )
+  }
 }
 
 export { WithStore }
