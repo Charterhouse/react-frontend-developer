@@ -48,7 +48,7 @@ describe('WithStore', () => {
     functionArgs = {}
     renderFunction = jest.fn((obj, dispatch) => {
       if (typeof obj === 'function' && dispatch === undefined) {
-        Object.assign(functionArgs, { dispatch })
+        Object.assign(functionArgs, { dispatch: obj })
       } else {
         Object.assign(functionArgs, obj, { dispatch })
       }
