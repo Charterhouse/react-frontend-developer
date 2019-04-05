@@ -1,6 +1,6 @@
 {
   "name": "@react-frontend-developer/react-redux-render-prop",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "react-redux but using render props",
   "license": "MIT",
   "homepage": "https://github.com/Charterhouse/react-frontend-developer/tree/master/workspaces/react-redux-render-prop",
