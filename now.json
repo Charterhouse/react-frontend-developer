@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "react-frontend-developer",
+  "builds": [
+    { "src": "workspaces/homepage/package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
+  ],
+  "routes": [
+    { "src": "/(?<path>.*)", "dest": "/workspaces/homepage/$path"}
+  ],
+  "alias": "react-frontend-developer"
+}

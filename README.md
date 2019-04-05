@@ -11,8 +11,8 @@ module systems.
 We would like React Frontend Developer to become a hub with handy resources about React: tutorials, videos, 
 training, blogposts, etc, that together will form a learning path for every react frontend developer. 
 
-We encourage you to browse our [documentation](https://react-frontend-developer.club/learning/react).
+We encourage you to browse our [documentation](https://react-frontend-developer.now.sh/learning/react).
 
-The React Frontend Developer website is deployed using [Netlify](https://www.netlify.com) and available at https://react-frontend-developer.club.
+The React Frontend Developer website is deployed using [now](https://zeit.co/now) and available at https://react-frontend-developer.now.sh.
 
-[Contributions](https://react-frontend-developer.club/developers/contributing) are welcomed! Join the club ;).
+[Contributions](https://react-frontend-developer.now.sh/developers/contributing) are welcomed!
