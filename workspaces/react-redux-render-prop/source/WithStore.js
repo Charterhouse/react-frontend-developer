@@ -23,7 +23,7 @@ class WithStoreInner extends React.Component {
       this.unsubscribe = this.props.store.subscribe(() => {
         if (this.unmounted) return
         const state = this.props.store.getState()
-        const props = this.props.selector ? this.props.selector(state) : state
+        const props = this.props.selector(state)
         if (!deepEqual(props, this.state, { strict: true })) {
           this.setState({
             ...props
@@ -42,9 +42,15 @@ class WithStoreInner extends React.Component {
   render () {
     const { store, render, children } = this.props
 
-    return render
-      ? render(this.state, store.dispatch)
-      : children(this.state, store.dispatch)
+    if (render) {
+      return this.state
+        ? render(this.state, store.dispatch)
+        : render(store.dispatch)
+    } else {
+      return this.state
+        ? children(this.state, store.dispatch)
+        : children(store.dispatch)
+    }
   }
 }
 
