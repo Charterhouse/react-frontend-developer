@@ -1,6 +1,6 @@
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 
-export const ArrowDown = glamorous.div({
+export const ArrowDown = styled.div({
   width: 0,
   height: 0,
   borderLeft: '5px solid transparent',

@@ -36,8 +36,8 @@
     "@emotion/styled": "^10.0.0"
   },
   "peerDependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "jest-dom": "^2.1.1",

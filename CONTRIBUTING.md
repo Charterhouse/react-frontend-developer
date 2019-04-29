@@ -117,7 +117,7 @@ fork](https://help.github.com/articles/syncing-a-fork/). We recommend that you
 keep your local master branch pointing to the upstream master branch. Remaining
 in sync then becomes really easy:
 
-```
+```bash
 git remote add upstream https://github.com/Charterhouse/react-frontend-developer.git
 git fetch upstream
 git branch --set-upstream-to=upstream/master master

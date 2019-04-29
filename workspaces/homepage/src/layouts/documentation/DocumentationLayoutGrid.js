@@ -1,4 +1,4 @@
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 import { rhythm } from 'src/utils/typography'
 import { Grid } from '@react-frontend-developer/css-grid-helper'
 
@@ -8,12 +8,12 @@ let grid = new Grid([
   gridTemplateColumns: '300px calc(100vw - 350px)'
 })
 
-const DocumentationLayoutGrid = glamorous.div(grid.container, {
+const DocumentationLayoutGrid = styled.div(grid.container, {
   boxSizing: 'border-box',
   margin: rhythm(1)
 })
 
-const SidebarGridItem = glamorous.div(grid.sidebar)
-const ContentGridItem = glamorous.div(grid.content, { width: '100%', padding: '1rem' })
+const SidebarGridItem = styled.div(grid.sidebar)
+const ContentGridItem = styled.div(grid.content, { width: '100%', padding: '1rem' })
 
 export { DocumentationLayoutGrid, SidebarGridItem, ContentGridItem }

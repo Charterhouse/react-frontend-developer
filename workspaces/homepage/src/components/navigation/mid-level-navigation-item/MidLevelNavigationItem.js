@@ -1,10 +1,10 @@
 import React from 'react'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 
 import { Collapsable } from '../Collapsable'
 import { NavigationLink } from '../NavigationLink'
 
-const Wrapper = glamorous.div({
+const Wrapper = styled.div({
   position: 'relative',
   display: 'flex',
   flexFlow: 'row nowrap',

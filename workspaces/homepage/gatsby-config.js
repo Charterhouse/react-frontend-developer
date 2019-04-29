@@ -60,7 +60,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`
       }
     },
-    'gatsby-plugin-glamor',
+    'gatsby-plugin-emotion',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-layout',
     'gatsby-plugin-root-import'

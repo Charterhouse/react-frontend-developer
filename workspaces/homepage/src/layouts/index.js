@@ -1,8 +1,8 @@
 import { React } from 'react'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 import { DocumentationLayout } from './documentation'
 
-const Wrapper = glamorous.div({
+const Wrapper = styled.div({
   padding: '25px'
 })
 

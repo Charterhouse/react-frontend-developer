@@ -44,14 +44,13 @@
    padding: .1rem;
    padding-left: 0.2rem;
    padding-right: 0.2rem;
-   border-radius: .3em;
-   border: 1px solid #F486CA;
    font-family: Roboto Mono, monospace;
-   font-weight: 100;
+   font-weight: 300;
    font-size: 0.8rem;
    color: #FF55BE;
    white-space: normal;
-   background-color: white;
+   border-radius: .3em;
+   background-color: rgb(245, 245, 245);
  }
  
  .token.comment,
