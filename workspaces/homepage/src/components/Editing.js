@@ -1,19 +1,19 @@
 import React from 'react'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 
-const A = glamorous.a({
+const A = styled.a({
   fontFamily: 'Roboto Mono, monospace',
   fontWeight: '100',
   fontSize: '0.8rem',
   color: '#FF55BE',
   marginRight: '2rem',
-  ':hover': {
+  '&:hover': {
     textDecoration: 'underline',
     color: '#FF55BE'
   }
 })
 
-const Wrapper = glamorous.div({
+const Wrapper = styled.div({
   display: 'flex',
   flexFlow: 'row nowrap',
   justifyContent: 'flex-start',
@@ -22,7 +22,7 @@ const Wrapper = glamorous.div({
 
 class EditFile extends React.Component {
   renderEditThisPageLink = (fileAbsolutePath, linkText) => {
-    const match = fileAbsolutePath.match(/.*\/(workspaces.*)$/) || fileAbsolutePath.match(/.*\/(.*)$/)
+    const match = fileAbsolutePath.match(/.*\/(src.*)$/) || fileAbsolutePath.match(/.*\/(.*)$/)
     if (match) {
       const fileRelativePath = match[1]
       const { editBaseUrl } = this.props

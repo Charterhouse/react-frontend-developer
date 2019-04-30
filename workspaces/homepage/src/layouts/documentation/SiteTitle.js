@@ -1,8 +1,8 @@
 import { React } from 'react'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
-const Wrapper = glamorous.div({
+const Wrapper = styled.div({
   backgroundColor: 'black',
   color: 'white',
   fontFamily: 'Roboto Mono, monospace',
@@ -14,10 +14,10 @@ const Wrapper = glamorous.div({
   marginBottom: '2rem'
 })
 
-const HomeLink = glamorous(Link)({
+const HomeLink = styled(Link)({
   color: 'white',
   fontWeight: '300',
-  ':hover': {
+  '&:hover': {
     color: 'white',
     textDecoration: 'none'
   }

@@ -1,14 +1,14 @@
 import { React } from 'react'
 import 'src/prismjs/themes/prism-tomorrow.css'
 import { StaticQuery, graphql } from 'gatsby'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 import { rhythm } from 'src/utils/typography'
 
 import { DocumentationLayoutGrid, SidebarGridItem, ContentGridItem } from './DocumentationLayoutGrid'
 import { Navigation } from 'src/components/navigation'
 import { SiteTitle } from './SiteTitle'
 
-export const FixedNavigation = glamorous.div({
+export const FixedNavigation = styled.div({
   display: 'block',
   position: 'fixed',
   top: 0,

@@ -1,12 +1,12 @@
 import React from 'react'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 
-const MarkerPositioner = glamorous.div({
+const MarkerPositioner = styled.div({
   position: 'absolute',
   left: '10px'
 })
 
-const Circle = glamorous.div(({ radius }) => ({
+const Circle = styled.div(({ radius }) => ({
   height: radius,
   width: radius,
   backgroundColor: '#F486CA',

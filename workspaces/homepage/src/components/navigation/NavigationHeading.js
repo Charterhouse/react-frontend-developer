@@ -1,10 +1,10 @@
 import React from 'react'
 import GithubSlugger from 'github-slugger'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 
 import { NavigationLink } from './NavigationLink'
 
-const ListSubItem = glamorous.li({
+const ListSubItem = styled.li({
   fontSize: '0.9rem'
 })
 

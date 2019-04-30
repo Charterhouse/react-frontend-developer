@@ -1,10 +1,10 @@
 import React from 'react'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 
 import { MidLevelNavigationItem } from './mid-level-navigation-item'
 import { NavigationHeading } from './NavigationHeading'
 
-const List = glamorous.ul({
+const List = styled.ul({
   listStyle: 'none',
   paddingTop: '0.5rem',
   paddingBottom: 0,

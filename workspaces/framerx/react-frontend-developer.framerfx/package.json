@@ -1,0 +1,25 @@
+{
+	"main": "build/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.4.16"
+	},
+	"peerDependencies": {
+		"framer": "^0.10.4",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6"
+	},
+	"framer": {
+		"id": "ec71a721-6abc-4834-a6e6-60ac4440c0d8"
+	},
+	"author": "Marcin Czenko",
+	"dependencies": {
+		"@cogitojs/cogito-react-ui": "^0.2.23",
+		"@emotion/core": "^10.0.10",
+		"@emotion/styled": "^10.0.10",
+		"@react-frontend-developer/react-layout-helpers": "^1.0.17",
+		"prop-types": "^15.7.2",
+		"semantic-ui-css": "^2.4.1",
+		"semantic-ui-react": "^0.86.0"
+	}
+}
