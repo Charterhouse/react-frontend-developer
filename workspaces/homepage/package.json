@@ -2,7 +2,7 @@
   "private": true,
   "name": "homepage",
   "description": "React Frontend Developer homepage",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "author": "Marcin Czenko <mczenko@me.com>",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
-    "@react-frontend-developer/css-grid-helper": "^1.0.17",
+    "@react-frontend-developer/css-grid-helper": "^1.0.20",
     "gatsby": "^2.3.33",
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-emotion": "^4.0.6",
