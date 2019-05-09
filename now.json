@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "react-frontend-developer",
+  "scope": "charterhouse",
   "builds": [
     { "src": "workspaces/homepage/package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
   ],
