@@ -13,7 +13,7 @@ $ yarn add '@react-frontend-developer/buffers'
 $ npm install '@react-frontend-developer/buffers'
 ```
 
-## About `Buffer`
+## Using Buffer
 
 Semantics of the NodeJS buffers is not instantly obvious. A NodeJS `Buffer` is similar to a JavaScript
 `Uint8Array`, actually, they largely share the same API, but their semantics is different here and there.
