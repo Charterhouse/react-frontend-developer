@@ -11,6 +11,7 @@
     "babel-jest": "^24.8.0",
     "babel-plugin-emotion": "^10.0.9",
     "eslint": "^5.16.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "gzip-size": "^5.1.1",
     "jest": "^24.8.0",
     "jest-emotion": "^10.0.11",
