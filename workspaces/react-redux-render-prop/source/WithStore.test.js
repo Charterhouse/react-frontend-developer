@@ -1,5 +1,5 @@
 import React from 'react'
-import { render as renderRtl } from 'react-testing-library'
+import { render as renderRtl } from '@testing-library/react'
 import { WithStore } from './'
 import { createStore } from 'redux'
 
