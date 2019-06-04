@@ -16,7 +16,7 @@ class TypedArrays {
   }
 
   static uint8Array2string (arr, encoding = 'utf16le') {
-    return Buffer.from(arr.buffer).toString(encoding)
+    return Buffer.from(arr).toString(encoding)
   }
 }
 
