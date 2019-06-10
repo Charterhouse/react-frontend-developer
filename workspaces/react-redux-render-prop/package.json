@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.1",
-    "jest-dom": "^3.4.0"
+    "jest-dom": "^3.5.0"
   },
   "dependencies": {
     "deep-equal": "^1.0.1"
