@@ -1,14 +1,18 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { EditFile } from 'src/components/Editing'
+import { EditFile } from 'src/confluenza/Editing'
 import { graphql } from 'gatsby'
 
 const Template = ({ data: { site: { siteMetadata }, doc }, location }) => {
   const { html, fileAbsolutePath, frontmatter: { title, content } } = doc
   const { editBaseUrl } = siteMetadata
+
   return (
     <div>
-      <Helmet title={title} />
+      <Helmet title={title}>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap' rel='stylesheet' />
+      </Helmet>
       <EditFile fileAbsolutePath={fileAbsolutePath}
         externalContent={content}
         editBaseUrl={editBaseUrl} />

@@ -1,85 +1,87 @@
-import { React } from 'react'
+import React from 'react'
 import 'src/prismjs/themes/prism-tomorrow.css'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from '@emotion/styled'
-import { rhythm } from 'src/utils/typography'
+import Media from 'react-media'
 
-import { DocumentationLayoutGrid, SidebarGridItem, ContentGridItem } from './DocumentationLayoutGrid'
-import { Navigation } from 'src/components/navigation'
-import { SiteTitle } from './SiteTitle'
+import { useUnusualReloader } from './useUnusualReloader'
 
-export const FixedNavigation = styled.div({
-  display: 'block',
-  position: 'fixed',
-  top: 0,
-  minWidth: '300px',
-  maxWidth: '300px',
-  height: `calc(100vh - ${rhythm(2)})`,
-  overflowY: 'auto',
-  backgroundColor: '#F7F7F7',
-  WebkitOverflowScrolling: `touch`,
-  '::-webkit-scrollbar': {
-    width: `6px`,
-    height: `6px`
-  },
-  '::-webkit-scrollbar-thumb': {
-    background: '#ccc'
-  }
-})
+import { DocumentationLayoutSmall } from './DocumentationLayoutSmall'
+import { DocumentationLayoutMedium } from './DocumentationLayoutMedium'
+import { DocumentationLayoutWide } from './DocumentationLayoutWide'
 
-const DocumentationLayout = ({ children, location }) => (
-  <StaticQuery
-    query={graphql`
-      query Navigation {
-        site {
-          siteMetadata {
-            title
+const DocumentationLayout = ({ children, location }) => {
+  const pageReady = useUnusualReloader(location)
+  return (
+    <StaticQuery
+      query={graphql`
+        query Navigation {
+          site {
+            siteMetadata {
+              title
+            }
           }
-        }
-        navigation: allMarkdownRemark(
-          filter: { frontmatter: { path: { ne: "/404.html" } } }
-          sort: { fields: [fileAbsolutePath], order: ASC }
-        ) {
-          docs: edges {
-            node {
-              frontmatter {
-                title
-                path
-                tag
-                content {
-                  childMarkdownRemark {
-                    html
-                    headings(depth: h2) {
-                      value
+          file(base: { eq: "MenuButton.png" }) {
+            publicURL
+          }
+          navigation: allMarkdownRemark(
+            filter: { frontmatter: { path: { ne: "/404.html" } } }
+            sort: { fields: [fileAbsolutePath], order: ASC }
+          ) {
+            docs: edges {
+              node {
+                frontmatter {
+                  title
+                  path
+                  tag
+                  content {
+                    childMarkdownRemark {
+                      html
+                      headings(depth: h2) {
+                        value
+                      }
                     }
                   }
                 }
-              }
-              headings(depth: h2) {
-                value
+                headings(depth: h2) {
+                  value
+                }
               }
             }
           }
         }
-      }
-    `}
-    render={data => {
-      const { site: { siteMetadata: { title } }, navigation: { docs } } = data
-      return (
-        <DocumentationLayoutGrid>
-          <SidebarGridItem>
-            <FixedNavigation>
-              <SiteTitle title={title} />
-              <Navigation docs={docs} location={location} />
-            </FixedNavigation>
-          </SidebarGridItem>
-          <ContentGridItem>
-            { children }
-          </ContentGridItem>
-        </DocumentationLayoutGrid>
-      )
-    }}
-  />
-)
+      `}
+      render={data => {
+        if (!pageReady) {
+          return null
+        }
+        return (
+          <Media query='(min-width: 1100px)'>
+            {matches =>
+              matches ? (
+                <DocumentationLayoutWide location={location} data={data}>
+                  { children }
+                </DocumentationLayoutWide>
+              ) : (
+                <Media query='(min-width: 768px)'>
+                  {matches =>
+                    matches ? (
+                      <DocumentationLayoutMedium location={location} data={data}>
+                        { children }
+                      </DocumentationLayoutMedium>
+                    ) : (
+                      <DocumentationLayoutSmall location={location} data={data}>
+                        { children }
+                      </DocumentationLayoutSmall>
+                    )
+                  }
+                </Media>
+              )
+            }
+          </Media>
+        )
+      }}
+    />
+  )
+}
 
 export { DocumentationLayout }
