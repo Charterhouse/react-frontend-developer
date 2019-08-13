@@ -1,6 +1,6 @@
 {
   "name": "@react-frontend-developer/react-redux-render-prop",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "react-redux but using render props",
   "license": "MIT",
   "homepage": "https://github.com/Charterhouse/react-frontend-developer/tree/master/workspaces/react-redux-render-prop",
@@ -36,8 +36,8 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^9.1.1",
-    "@testing-library/jest-dom": "^4.0.0"
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^9.1.1"
   },
   "dependencies": {
     "deep-equal": "^1.0.1"
