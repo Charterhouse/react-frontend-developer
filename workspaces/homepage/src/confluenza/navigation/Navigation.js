@@ -107,8 +107,15 @@ export class Navigation extends React.PureComponent {
   }
 
   updateDeltas = (group, index, d) => {
-    const deltas = [...this.state[`${group}Deltas`]]
+    let deltas = [...this.state[`${group}Deltas`]]
     deltas[index] = d
+    deltas = [...deltas].map(d => {
+      if (d === undefined) {
+        return 0
+      }
+      return d
+    })
+    console.log('deltas[after]', deltas)
     this.setState({ [`${group}Deltas`]: deltas })
   }
 
