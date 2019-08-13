@@ -32,15 +32,15 @@
     "layout"
   ],
   "dependencies": {
-    "@emotion/core": "^10.0.14",
-    "@emotion/styled": "^10.0.14"
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15"
   },
   "peerDependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^8.0.4",
-    "jest-dom": "^3.5.0"
+    "@testing-library/react": "^9.1.1",
+    "@testing-library/jest-dom": "^4.0.0"
   }
 }

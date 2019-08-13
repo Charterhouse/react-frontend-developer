@@ -6,8 +6,8 @@
 	},
 	"peerDependencies": {
 		"framer": "^0.10.4",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6"
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0"
 	},
 	"framer": {
 		"id": "ec71a721-6abc-4834-a6e6-60ac4440c0d8"

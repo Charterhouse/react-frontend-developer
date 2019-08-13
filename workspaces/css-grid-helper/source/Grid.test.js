@@ -2,7 +2,7 @@ import { Grid } from './Grid'
 
 describe('Grid', () => {
   it('takes grid specification as an argument', () => {
-    let grid = new Grid([
+    const grid = new Grid([
       'cell11 cell12',
       'cell21 cell22'
     ])
@@ -10,7 +10,7 @@ describe('Grid', () => {
   })
 
   it('the returned object has container property', () => {
-    let grid = new Grid([
+    const grid = new Grid([
       'cell11 cell12',
       'cell21 cell22'
     ])
@@ -19,7 +19,7 @@ describe('Grid', () => {
   })
 
   it('returns an object with properties corresponding to the names of cells', () => {
-    let grid = new Grid([
+    const grid = new Grid([
       'cell11 cell12',
       'cell21 cell22'
     ])
@@ -31,7 +31,7 @@ describe('Grid', () => {
   })
 
   it('the returned container object has display propery set to grid', () => {
-    let grid = new Grid([
+    const grid = new Grid([
       'cell11 cell12',
       'cell21 cell22'
     ])

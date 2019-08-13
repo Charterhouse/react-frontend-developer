@@ -32,12 +32,12 @@
     "render props"
   ],
   "peerDependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^8.0.4",
-    "jest-dom": "^3.5.0"
+    "@testing-library/react": "^9.1.1",
+    "@testing-library/jest-dom": "^4.0.0"
   },
   "dependencies": {
     "deep-equal": "^1.0.1"
