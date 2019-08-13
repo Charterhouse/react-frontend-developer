@@ -115,7 +115,6 @@ export class Navigation extends React.PureComponent {
       }
       return d
     })
-    console.log('deltas[after]', deltas)
     this.setState({ [`${group}Deltas`]: deltas })
   }
 
