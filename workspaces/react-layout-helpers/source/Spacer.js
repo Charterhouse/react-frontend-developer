@@ -6,8 +6,9 @@ export const Spacer = ({ children, render, margin = 0, padding = 0 }) => {
       margin: margin,
       padding: padding,
       boxSizing: 'border-box'
-    }}>
-      { render ? render() : children }
+    }}
+    >
+      {render ? render() : children}
     </div>
   )
 }
