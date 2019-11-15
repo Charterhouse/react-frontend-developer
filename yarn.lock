@@ -1413,10 +1413,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@confluenza/confluenza@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@confluenza/confluenza/-/confluenza-1.0.1.tgz#c81c9b160b8c1489e59a203b833aa39b342faf16"
-  integrity sha512-s4G6H60oHZPMVKDljCOM9m4b03WMjdE2iOvjd6atM1IIsz01aRXFbnt73foWwkSpDafZIeBe5HmG7zVjYrSZYg==
+"@confluenza/confluenza@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@confluenza/confluenza/-/confluenza-1.0.2.tgz#3cf3e6e34dd11111333732e1ac352d43f1a3a61c"
+  integrity sha512-1LajtxCpH0zehhhHQ+VtK+anVpsS5C75WWPoZaRPq9JGeTXa/sngI5013hRkPx5FN1PGhIK1w9tCHfTnbCbGFA==
   dependencies:
     "@emotion/core" "^10.0.15"
     "@emotion/styled" "^10.0.15"
@@ -1425,18 +1425,19 @@
     typography "^0.16.19"
     typography-theme-moraga "^0.16.19"
 
-"@confluenza/gatsby-theme-confluenza@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@confluenza/gatsby-theme-confluenza/-/gatsby-theme-confluenza-1.0.1.tgz#0b64bf3f2b7a1c874a9c8a8274c51c72b6944f58"
-  integrity sha512-vSYjZf1QF9aq90SVARoZDkTApyqbm98VIwxq5XfGBTwMYICR3mvMNPPf3zlixh6fMQGU0e2rAS3yI12qd6Bhcg==
+"@confluenza/gatsby-theme-confluenza@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@confluenza/gatsby-theme-confluenza/-/gatsby-theme-confluenza-1.0.3.tgz#6e65ac17e84d295061d96e9580b0f507f10621fb"
+  integrity sha512-HtKgAq62YVuKhqEa/ZOlhfQ5gCLavdbIqwD3rB57t+rnznlEBQvUkFuoOYm204MZtQCmGjeTBDRwjn2ca9tGHA==
   dependencies:
-    "@confluenza/confluenza" "^1.0.1"
+    "@confluenza/confluenza" "^1.0.2"
     "@emotion/core" "^10.0.15"
     "@emotion/styled" "^10.0.15"
     "@react-frontend-developer/css-grid-helper" "^1.0.22"
     gatsby-plugin-catch-links "^2.1.2"
     gatsby-plugin-emotion "^4.1.2"
     gatsby-plugin-layout "^1.1.3"
+    gatsby-plugin-page-creator "^2.1.30"
     gatsby-plugin-react-helmet "^3.1.3"
     gatsby-plugin-sharp "^2.2.11"
     gatsby-plugin-typography "^2.3.2"
@@ -8343,6 +8344,20 @@ gatsby-page-utils@^0.0.29:
     micromatch "^3.1.10"
     slash "^3.0.0"
 
+gatsby-page-utils@^0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.0.30.tgz#dac099d695540f769fafaf156744f6017ea21a59"
+  integrity sha512-dI5K5Q6N5S7SXw4y+8Iu9+60X/orv0SXXxKxvvWHot4CuxHvV4n+nUGyf0dA/87vRBlR6mIncLnSU1JcQr1acg==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+    bluebird "^3.7.1"
+    chokidar "3.3.0"
+    fs-exists-cached "^1.0.0"
+    glob "^7.1.6"
+    lodash "^4.17.15"
+    micromatch "^3.1.10"
+    slash "^3.0.0"
+
 gatsby-plugin-catch-links@^2.1.16:
   version "2.1.16"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.1.16.tgz#8e05c9b609353c39d8e7e6b38e678c4833c2237b"
@@ -8391,6 +8406,19 @@ gatsby-plugin-page-creator@^2.1.29:
     bluebird "^3.7.1"
     fs-exists-cached "^1.0.0"
     gatsby-page-utils "^0.0.29"
+    glob "^7.1.6"
+    lodash "^4.17.15"
+    micromatch "^3.1.10"
+
+gatsby-plugin-page-creator@^2.1.30:
+  version "2.1.30"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.1.30.tgz#ee57c6a8ac4cdbed7fa3ae99e6ada0df427d7fed"
+  integrity sha512-2ChRSqj+NoKxTyk+U/0SpRpV2l7unb+xbhnV4uxlfjtCY9xo6/ysj4NnAwX8uY2WgY5zA1bDNiS+3zASN692+Q==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+    bluebird "^3.7.1"
+    fs-exists-cached "^1.0.0"
+    gatsby-page-utils "^0.0.30"
     glob "^7.1.6"
     lodash "^4.17.15"
     micromatch "^3.1.10"
