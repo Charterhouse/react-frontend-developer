@@ -91,7 +91,7 @@ We also prepared for you a RunKit where you can try it immediately: https://runk
 
 #### You have a Buffer and want to convert it to TypedArray
 
-So `Buffer` is the older brother of `Uint8Array` - thus, we provides two methods to conveniently move between the two: `Buffers.copyToUint8Array` and `Buffers.moveToUint8Array`. `Buffers.copyToUint8Array` is super save. It takes a NodeJS `Buffer` as the input and returns `Uint8Array` with its own underlying `ArrayBuffer` so that you do not have to worry if the Buffer is modified after conversion. You also do not have to care about buffer sizes, message pools, etc:
+So `Buffer` is the older brother of `Uint8Array` - thus, we provide two methods to conveniently move between the two: `Buffers.copyToUint8Array` and `Buffers.moveToUint8Array`. `Buffers.copyToUint8Array` is super save. It takes a NodeJS `Buffer` as the input and returns `Uint8Array` with its own underlying `ArrayBuffer` so that you do not have to worry if the Buffer is modified after conversion. You also do not have to care about buffer sizes, message pools, etc:
 
 ```javascript
 const buffer = Buffer.alloc(20, 'a')
@@ -102,7 +102,7 @@ In some case, you may not want to copy. Imagine you have a large (like, really l
 
 ```javascript
 const largeBuffer = Buffer.allocUnsafe(4096).fill('a')
-const uint8Array = Buffers.copyToUint8Array(buffer)
+const uint8Array = Buffers.moveToUint8Array(buffer)
 ```
 
 You will get an `Uint8Array` view on the same underlying `ArrayBuffer` - thus no copying.
