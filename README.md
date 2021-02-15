@@ -11,8 +11,8 @@ module systems.
 We would like React Frontend Developer to become a hub with handy resources about React: tutorials, videos, 
 training, blogposts, etc, that together will form a learning path for every react frontend developer. 
 
-We encourage you to browse our [documentation](https://react-frontend-developer.now.sh/learning/react).
+We encourage you to browse our [documentation](https://react-frontend-developer.vercel.app/learning/react).
 
-The React Frontend Developer website is deployed using [now](https://zeit.co/now) and available at https://react-frontend-developer.now.sh.
+The React Frontend Developer website is deployed using [Vercel](https://vercel.com) and available at https://react-frontend-developer.vercel.app.
 
-[Contributions](https://react-frontend-developer.now.sh/developers/contributing) are welcomed!
+[Contributions](https://react-frontend-developer.vercel.app/developers/contributing) are welcomed!
