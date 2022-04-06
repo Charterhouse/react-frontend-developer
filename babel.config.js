@@ -20,12 +20,18 @@ function setupPresets (babelEnv) {
     presetEnv = ['@babel/preset-env', { modules: false }]
   }
 
-  return [presetEnv, '@babel/preset-react']
+  return [
+    presetEnv,
+    [
+      '@babel/preset-react',
+      { runtime: 'automatic' }
+    ]
+  ]
 }
 
 function setupPlugins () {
   return [
-    'emotion',
+    '@emotion',
     '@babel/plugin-proposal-object-rest-spread',
     '@babel/plugin-proposal-class-properties'
   ]

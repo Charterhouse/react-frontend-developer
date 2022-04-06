@@ -1,7 +1,7 @@
-const fs = require('fs')
-const execSync = require('child_process').execSync
-const prettyBytes = require('pretty-bytes')
-const gzipSize = require('gzip-size')
+import fs from 'fs'
+import { execSync } from 'child_process'
+import prettyBytes from 'pretty-bytes'
+import { gzipSizeSync } from 'gzip-size'
 
 class Builder {
   constructor ({ iifeFileName }) {
@@ -44,7 +44,7 @@ class Builder {
       NODE_ENV: 'production'
     })
 
-    const size = gzipSize.sync(
+    const size = gzipSizeSync(
       fs.readFileSync(`iife/${this.iifeFileName}.min.js`)
     )
 
@@ -53,4 +53,4 @@ class Builder {
   }
 }
 
-module.exports = { Builder }
+export { Builder }

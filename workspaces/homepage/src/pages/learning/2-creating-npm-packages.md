@@ -2,6 +2,7 @@
 path: /learning/creating-npm-packages
 title: Creating npm packages
 tag: learning
+sortIndex: 20
 ---
 
 Creating a valid, well-structured, and user-friendly npm package is not hard and an interested user will find a number of good examples. We like to recommend two online resources that we found very educative and useful in building and distributing our own npm packages:

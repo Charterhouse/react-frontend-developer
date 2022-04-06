@@ -1,0 +1,4 @@
+workspaces/homepage/public/**
+**/lib/**
+**/es/**
+**/iife/**
