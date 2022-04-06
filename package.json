@@ -49,7 +49,6 @@
     "parser": "babel-eslint",
     "ignore": [
       "workspaces/homepage/public/**",
-      "workspaces/framerx/**",
       "**/node_modules/**",
       "**/lib/**",
       "**/es/**",
