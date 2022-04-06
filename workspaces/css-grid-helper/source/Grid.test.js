@@ -30,7 +30,7 @@ describe('Grid', () => {
     expect(grid.cell22).toBeDefined()
   })
 
-  it('the returned container object has display propery set to grid', () => {
+  it('the returned container object has display property set to grid', () => {
     const grid = new Grid([
       'cell11 cell12',
       'cell21 cell22'

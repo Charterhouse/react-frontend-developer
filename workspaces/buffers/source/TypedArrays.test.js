@@ -6,8 +6,8 @@ describe('TypedArrays', () => {
 
   describe('converting string to a TypedArray', () => {
     const utf162ab = str => {
-      var buf = new ArrayBuffer(str.length * 2) // 2 bytes for each char
-      var bufView = new Uint16Array(buf)
+      const buf = new ArrayBuffer(str.length * 2) // 2 bytes for each char
+      const bufView = new Uint16Array(buf)
       Array.from(str).forEach((c, i) => {
         bufView[i] = str.charCodeAt(i)
       })
@@ -15,8 +15,8 @@ describe('TypedArrays', () => {
     }
 
     const utf82ab = str => {
-      var buf = new ArrayBuffer(str.length) // 1 byte for each char
-      var bufView = new Uint8Array(buf)
+      const buf = new ArrayBuffer(str.length) // 1 byte for each char
+      const bufView = new Uint8Array(buf)
       Array.from(str).forEach((c, i) => {
         bufView[i] = str.charCodeAt(i)
       })

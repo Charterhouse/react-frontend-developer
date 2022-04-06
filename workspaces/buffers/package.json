@@ -12,7 +12,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "node ./tools/build.js"
+    "build": "node ./tools/build.mjs"
   },
   "engines": {
     "node": ">=8.0.0"

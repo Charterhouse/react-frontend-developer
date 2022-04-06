@@ -11,3 +11,12 @@ lerna-debug.log
 
 # test coverage
 coverage
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

@@ -9,15 +9,15 @@
     "url": "https://github.com/Charterhouse/react-frontend-developer.git"
   },
   "dependencies": {
-    "@confluenza/gatsby-theme-confluenza": "^1.0.12",
-    "@emotion/core": "^10.0.22",
-    "@emotion/styled": "^10.0.23",
-    "gatsby": "^2.17.13",
-    "gatsby-plugin-catch-links": "^2.1.16",
-    "gatsby-plugin-emotion": "^4.1.14",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1",
+    "@confluenza/gatsby-theme-confluenza": "^1.0.38",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "gatsby": "^4.11.2",
+    "gatsby-plugin-catch-links": "^4.11.0",
+    "gatsby-plugin-emotion": "^7.11.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-helmet": "^6.1.0",
     "react-media": "^1.10.0"
   },
   "keywords": [
@@ -30,22 +30,14 @@
   "scripts": {
     "build": "gatsby build",
     "now-build": "(cd ../../ && yarn build) && yarn build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "babel-plugin-emotion": "^10.0.23",
-    "eslint": "^6.6.0",
-    "eslint-config-react-app": "^5.0.2",
-    "eslint-plugin-react-hooks": "^2.2.0",
-    "gatsby-cli": "^2.8.10",
-    "gatsby-plugin-root-import": "^2.0.5",
-    "jest-emotion": "^10.0.17",
-    "rollup": "^1.27.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "@babel/core": "^7.17.8",
+    "@emotion/babel-plugin": "^11.7.2",
+    "gatsby-cli": "^4.11.2",
+    "gatsby-plugin-root-import": "^2.0.8"
   }
 }

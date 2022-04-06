@@ -20,7 +20,7 @@ describe('Buffers', () => {
       it('does not use message pool when creating a Buffer without copying', () => {
         const buffer = Buffers.moveFromTypedArray(input)
 
-        expect(buffer.length).toBe(buffer.buffer.byteLength)
+        expect(buffer).toHaveLength(buffer.buffer.byteLength)
         expect(buffer.byteOffset).toBe(0)
       })
     })
@@ -63,7 +63,7 @@ describe('Buffers', () => {
         const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array.buffer)
 
-        expect(buffer.length).toBe(buffer.buffer.byteLength)
+        expect(buffer).toHaveLength(buffer.buffer.byteLength)
 
         const arrayBuffer = Buffers.copyToArrayBuffer(buffer)
 
@@ -89,7 +89,7 @@ describe('Buffers', () => {
         const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array)
 
-        expect(buffer.length).toBe(5)
+        expect(buffer).toHaveLength(5)
         expect(buffer.buffer.byteLength).toBe(Buffer.poolSize)
 
         const arrayBuffer = Buffers.copyToArrayBuffer(buffer)
@@ -114,7 +114,7 @@ describe('Buffers', () => {
         const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array.buffer)
 
-        expect(buffer.length).toBe(buffer.buffer.byteLength)
+        expect(buffer).toHaveLength(buffer.buffer.byteLength)
 
         const arrayBuffer = Buffers.moveToArrayBuffer(buffer)
 
@@ -139,7 +139,7 @@ describe('Buffers', () => {
         const array = Uint8Array.from({ length: 5 }, (v, k) => k)
         const buffer = Buffer.from(array)
 
-        expect(buffer.length).toBe(5)
+        expect(buffer).toHaveLength(5)
         expect(buffer.buffer.byteLength).toBe(Buffer.poolSize)
 
         const arrayBuffer = Buffers.moveToArrayBuffer(buffer)
