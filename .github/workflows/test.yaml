@@ -9,7 +9,7 @@ on:
 jobs:
   nodejs:
     name: Test
-    runs-on: [ubuntu]
+    runs-on: ubuntu-latest
 
     env:
       CI: true
