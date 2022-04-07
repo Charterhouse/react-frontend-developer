@@ -11,8 +11,9 @@
   },
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
-    "build": "node ./tools/build.mjs"
+    "build": "tsc && node ./tools/build.mjs"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -21,6 +22,7 @@
     "lib",
     "es",
     "iife",
+    "types",
     "source"
   ],
   "publishConfig": {
@@ -33,5 +35,11 @@
     "ArrayBuffer",
     "Uint8Array",
     "Uint16Array"
-  ]
+  ],
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@types/jest": "^27.4.1",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  }
 }

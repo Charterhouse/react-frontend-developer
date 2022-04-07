@@ -1,5 +1,4 @@
 {
-  "jest.pathToJest": "npm test --",
-  "jest.restartJestOnSnapshotUpdate": true,
-  "typescript.validate.enable": false
+  "typescript.validate.enable": true,
+  "jest.jestCommandLine": "yarn test"
 }

@@ -22,6 +22,7 @@ function setupPresets (babelEnv) {
 
   return [
     presetEnv,
+    '@babel/preset-typescript',
     [
       '@babel/preset-react',
       { runtime: 'automatic' }
@@ -41,7 +42,7 @@ function setupIgnoredFiles (babelEnv) {
   let ignore
 
   if (babelEnv !== 'test') {
-    ignore = ['**/*.test.js']
+    ignore = ['**/*.test.js', '**/*.test.ts']
   }
 
   return ignore

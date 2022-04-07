@@ -5,13 +5,15 @@ import resolve from '@rollup/plugin-node-resolve'
 import { uglify } from 'rollup-plugin-uglify'
 import builtins from 'rollup-plugin-node-builtins'
 import globals from 'rollup-plugin-node-globals'
+import typescript from '@rollup/plugin-typescript'
 
 const config = {
-  input: 'source/index.js',
+  input: 'source/index.ts',
   output: {
     name: 'buffers'
   },
   plugins: [
+    typescript(),
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),

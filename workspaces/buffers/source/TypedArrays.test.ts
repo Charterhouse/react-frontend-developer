@@ -5,7 +5,7 @@ describe('TypedArrays', () => {
   const testString = 'aBCD'
 
   describe('converting string to a TypedArray', () => {
-    const utf162ab = str => {
+    const utf162ab = (str:string): ArrayBuffer => {
       const buf = new ArrayBuffer(str.length * 2) // 2 bytes for each char
       const bufView = new Uint16Array(buf)
       Array.from(str).forEach((c, i) => {
@@ -14,7 +14,7 @@ describe('TypedArrays', () => {
       return buf
     }
 
-    const utf82ab = str => {
+    const utf82ab = (str: string): ArrayBuffer => {
       const buf = new ArrayBuffer(str.length) // 1 byte for each char
       const bufView = new Uint8Array(buf)
       Array.from(str).forEach((c, i) => {
@@ -30,7 +30,7 @@ describe('TypedArrays', () => {
     })
 
     it('can convert utf16 string to Uint8Array', () => {
-      const output = TypedArrays.string2Uint8Array(testString)
+      const output = TypedArrays.string2Uint8Array(testString, 'utf16le')
 
       expect(output).toEqual(new Uint8Array(utf162ab(testString)))
     })
@@ -61,7 +61,7 @@ describe('TypedArrays', () => {
     })
 
     it('can convert utf16 string to ArrayBuffer', () => {
-      const output = TypedArrays.string2ab(testString)
+      const output = TypedArrays.string2ab(testString, 'utf16le')
 
       expect(new Uint16Array(output)).toEqual(new Uint16Array(utf162ab(testString)))
     })

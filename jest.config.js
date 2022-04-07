@@ -5,6 +5,6 @@ module.exports = {
     'workspaces/react-layout-helpers'
   ],
   collectCoverage: true,
-  collectCoverageFrom: ['source/**.js', '!**/*.test.js', '!**/node_modules/**'],
+  collectCoverageFrom: ['source/**.js', 'source/**.ts', '!**/*.test.js', '!**/node_modules/**'],
   coverageReporters: ['text-summary', 'lcov']
 }

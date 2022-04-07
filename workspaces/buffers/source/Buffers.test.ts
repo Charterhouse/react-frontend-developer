@@ -2,11 +2,11 @@ import { Buffers } from './Buffers'
 
 describe('Buffers', () => {
   describe('converting TypedArrays to Buffer', function () {
-    let input
+    let input: Uint8Array
 
     beforeEach(() => {
-      const buf = Buffer.from('Ala ma kota', 'utf16le')
-      const inputArrayBuffer = buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.length)
+      const buf: Buffer = Buffer.from('Ala ma kota', 'utf16le')
+      const inputArrayBuffer: ArrayBuffer = buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.length)
       input = new Uint8Array(inputArrayBuffer)
     })
 
@@ -163,40 +163,40 @@ describe('Buffers', () => {
   describe('converting from string', () => {
     const testInputString = 'Test String'
 
-    const ab2str = buf => {
-      return String.fromCharCode.apply(null, new Uint16Array(buf))
+    const ab2str = (buf: ArrayBuffer): string => {
+      return String.fromCharCode.apply(null, new Uint16Array(buf) as unknown as number[])
     }
 
-    const ab2strUtf8 = buf => {
-      return String.fromCharCode.apply(null, new Uint8Array(buf))
+    const ab2strUtf8 = (buf: ArrayBuffer): string => {
+      return String.fromCharCode.apply(null, new Uint8Array(buf) as unknown as number[])
     }
 
-    it('by default it converts UTF16 string to a buffer', () => {
+    it('by default it converts utf8 string to a buffer', () => {
       const buffer = Buffers.fromString(testInputString)
       const arrayBuffer = buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.length)
-      expect(ab2str(arrayBuffer)).toBe(testInputString)
+      expect(ab2strUtf8(arrayBuffer)).toBe(testInputString)
     })
 
     it('can also convert any other encoding supported by Buffer.from', () => {
-      const buffer = Buffers.fromString(testInputString, 'utf8')
+      const buffer = Buffers.fromString(testInputString, 'utf16le')
       const arrayBuffer = buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.length)
-      expect(ab2strUtf8(arrayBuffer)).toBe(testInputString)
+      expect(ab2str(arrayBuffer)).toBe(testInputString)
     })
   })
 
   describe('converting to string', () => {
     const testInputString = 'Test'
 
-    it('by default it converts Buffer to a UTF16 string', () => {
-      const buffer = Buffer.from(testInputString, 'utf16le')
+    it('by default it converts Buffer to a utf8 string', () => {
+      const buffer = Buffer.from(testInputString, 'utf8')
 
       expect(Buffers.toString(buffer)).toEqual(testInputString)
     })
 
     it('can also convert Buffer to any other encoding supported by buf.toString(encoding)', () => {
-      const buffer = Buffer.from(testInputString, 'utf8')
+      const buffer = Buffer.from(testInputString, 'utf16le')
 
-      expect(Buffers.toString(buffer, 'utf8')).toEqual(testInputString)
+      expect(Buffers.toString(buffer, 'utf16le')).toEqual(testInputString)
     })
   })
 })
