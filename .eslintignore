@@ -2,3 +2,4 @@ workspaces/homepage/public/**
 **/lib/**
 **/es/**
 **/iife/**
+workspaces/buffers/types/**

@@ -20,13 +20,13 @@ class Builder {
     console.log(`Building ${this.iifeFileName}`)
     console.log('Building CommonJS modules ...')
 
-    this.exec('babel source -d lib --delete-dir-on-start --no-babelrc --source-maps', {
+    this.exec('babel source -d lib --delete-dir-on-start --no-babelrc --source-maps --extensions ".js,.ts"', {
       BABEL_ENV: 'commonjs'
     })
 
     console.log('\nBuilding ES modules ...')
 
-    this.exec('babel source -d es --delete-dir-on-start --no-babelrc --source-maps', {
+    this.exec('babel source -d es --delete-dir-on-start --no-babelrc --source-maps --extensions ".js,.ts"', {
       BABEL_ENV: 'es'
     })
 
