@@ -1,5 +1,5 @@
 import type { Encoding } from './Encoding'
-type TypedArray = 
+type TypedArray =
   Uint8Array |
   Uint16Array |
   Uint32Array |

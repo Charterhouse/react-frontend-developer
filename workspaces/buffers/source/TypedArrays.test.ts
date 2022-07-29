@@ -54,6 +54,15 @@ describe('TypedArrays', () => {
         0xab]))
     })
 
+    it('can convert base64 string to Uint8Array', () => {
+      const testBase64String = Buffer.from(testString).toString('base64')
+      const output = TypedArrays.string2Uint8Array(testBase64String, 'base64')
+
+      expect(output).toEqual(new Uint8Array(
+        Buffer.from(testBase64String, 'base64')
+      ))
+    })
+
     it('can convert utf8 string to ArrayBuffer', () => {
       const output = TypedArrays.string2ab(testString, 'utf8')
 
@@ -83,6 +92,15 @@ describe('TypedArrays', () => {
         parseInt('0xab63', 16) // c\u00ab
       ]))
     })
+
+    it('can convert base64 string to ArrayBuffer', () => {
+      const testBase64String = Buffer.from(testString).toString('base64')
+      const output = TypedArrays.string2ab(testBase64String, 'base64')
+
+      expect(new Uint8Array(output)).toEqual(new Uint8Array(
+        Buffer.from(testBase64String, 'base64')
+      ))
+    })
   })
 
   describe('converting TypeArray to string', () => {
@@ -91,6 +109,7 @@ describe('TypedArrays', () => {
     const testUint8ArrayUtf16 = Buffers.copyToUint8Array(Buffers.fromString(testString))
     const testUint8ArrayHex = Buffers.copyToUint8Array(Buffers.fromString(testString, 'hex'))
     const testUint8ArrayBinary = Buffers.copyToUint8Array(Buffers.fromString(testBinaryString, 'binary'))
+    const testUint8ArrayBase64 = Buffers.copyToUint8Array(Buffers.fromString(testString, 'base64'))
 
     it('can convert Uint8Array to utf8 string', () => {
       const output = TypedArrays.uint8Array2string(testUint8ArrayUtf8, 'utf8')
@@ -116,6 +135,12 @@ describe('TypedArrays', () => {
       expect(output).toEqual(testBinaryString)
     })
 
+    it('can convert Uint8Array to basse64 string', () => {
+      const output = TypedArrays.uint8Array2string(testUint8ArrayBase64, 'base64')
+
+      expect(output).toEqual(testString)
+    })
+
     it('can convert ArrayBuffer to utf8 string', () => {
       const output = TypedArrays.ab2string(testUint8ArrayUtf8.buffer, 'utf8')
 
@@ -138,6 +163,12 @@ describe('TypedArrays', () => {
       const output = TypedArrays.ab2string(testUint8ArrayBinary.buffer, 'binary')
 
       expect(output).toEqual(testBinaryString)
+    })
+
+    it('can convert ArrayBuffer to base64 string', () => {
+      const output = TypedArrays.ab2string(testUint8ArrayBase64.buffer, 'base64')
+
+      expect(output).toEqual(testString)
     })
   })
 })
