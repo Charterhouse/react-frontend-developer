@@ -1,9 +1,10 @@
+/**
+ * @type {import('@types/eslint').Linter.BaseConfig}
+ */
 module.exports = {
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   globals: {
-    __PATH_PREFIX__: true,
-    cy: 'readonly',
-    Cypress: 'readonly'
+    __PATH_PREFIX__: true
   },
   env: {
     browser: true,
@@ -19,6 +20,9 @@ module.exports = {
     }
   },
   extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'standard',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
@@ -29,20 +33,19 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    babelOptions: {
-      presets: ['@babel/preset-react']
-    },
     requireConfigFile: false,
     ecmaVersion: 12,
     sourceType: 'module'
   },
   plugins: [
+    '@typescript-eslint',
     'react',
     'jest'
   ],
   rules: {
     'react/prop-types': 0,
     'jsx-quotes': ['error', 'prefer-single'],
-    'jest/expect-expect': 0
+    'jest/expect-expect': 0,
+    'jest/no-standalone-expect': 0
   }
 }
